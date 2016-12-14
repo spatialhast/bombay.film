@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TileMap version="1.0.0" tilemapservice="http://tms.osgeo.org/1.0.0">
+      <Title>Bombay1924_clip.tif</Title>
+      <Abstract></Abstract>
+      <SRS>EPSG:3857</SRS>
+      <BoundingBox minx="72.80930956759431" miny="18.91692643785464" maxx="72.85241978690399" maxy="18.97146771247225"/>
+      <Origin x="72.80930956759431" y="18.91692643785464"/>
+      <TileFormat width="256" height="256" mime-type="image/png" extension="png"/>
+      <TileSets profile="mercator">
+        <TileSet href="14" units-per-pixel="9.55462853393555" order="14"/>
+        <TileSet href="15" units-per-pixel="4.77731426696777" order="15"/>
+        <TileSet href="16" units-per-pixel="2.38865713348389" order="16"/>
+      </TileSets>
+    </TileMap>
+    
