@@ -1,10 +1,9 @@
   var map = L.map('map', {
       center: [18.9441970752, 72.8308646772],
       zoom: 14,
-      minZoom: 14,
-      maxZoom: 16,
-  })
-
+      minZoom: 5,
+      maxZoom: 18,
+  });
 
   var layerMapboxLight = new L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGFzdCIsImEiOiJjaXdwNGFtdzUwMDBsMm9wNzd3NGFtOThtIn0.lFgLx089BmfigTPq7sUVhA', {
       maxZoom: 18,
@@ -23,6 +22,8 @@
   });
 
   var layerMapboxImagery = new L.tileLayer('https://{s}.tiles.mapbox.com/v4/openstreetmap.map-inh7ifmo/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnN0cmVldG1hcCIsImEiOiJhNVlHd29ZIn0.ti6wATGDWOmCnCYen-Ip7Q', {
+      maxNativeZoom: 17,
+      maxZoom: 18,
       attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a>'
   });
 
@@ -61,9 +62,10 @@
       tms: true,
       opacity: 1,
       zIndex: 1,
+      maxNativeZoom: 16,
+      maxZoom: 18,
       attribution: ""
   });
-
 
   var baseLayers = {
       "Mapbox Streets": layerMapboxLight,
