@@ -2,7 +2,7 @@
       center: [18.9441970752, 72.8308646772],
       zoom: 14,
       minZoom: 5,
-      maxZoom: 18,
+      maxZoom: 18
   });
 
   var layerMapboxLight = new L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGFzdCIsImEiOiJjaXdwNGFtdzUwMDBsMm9wNzd3NGFtOThtIn0.lFgLx089BmfigTPq7sUVhA', {
@@ -28,14 +28,14 @@
   });
 
   var BingLayer = L.TileLayer.extend({
-      getTileUrl: function (tilePoint) {
+      getTileUrl: function(tilePoint) {
           this._adjustTilePoint(tilePoint);
           return L.Util.template(this._url, {
               s: this._getSubdomain(tilePoint),
               q: this._quadKey(tilePoint.x, tilePoint.y, this._getZoomForUrl())
           });
       },
-      _quadKey: function (x, y, z) {
+      _quadKey: function(x, y, z) {
           var quadKey = [];
           for (var i = z; i > 0; i--) {
               var digit = '0';
@@ -85,50 +85,49 @@
 
   layerMapboxLight.addTo(map);
   bombay_1930.addTo(map);
-  
-  
-  
-  
- 
-            var mki = new L.icon({
-                iconUrl: 'data/pilots.png',
-                iconAnchor: [16, 16],
-                popupAnchor: [0, -16]
-            });
-    
-              var pointLayer = L.geoJson(null, {
-                pointToLayer: function(feature, latlng) {
-                    return L.marker(latlng, {
-                        //icon: mki,
-                        title: feature.properties.provided_name,
-                        riseOnHover: true
-                    });
-                },
-                onEachFeature: function(feature, layer) {
-                    if (feature.properties) {
-                        var content = '<b>' + feature.properties.provided_name + '</b>' +
-                            '<br>' + feature.properties.description;
-                            
-                        layer.bindPopup(content);
-                    }
-                }
-            });
-            $.getJSON("data/points.geojson", function(data) {
-                pointLayer.addData(data);
-                map.fitBounds(pointLayer);
-            });
-            
-            map.addLayer(pointLayer);
-            
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+  var redMarker = L.AwesomeMarkers.icon({
+      //icon: 'film',
+      icon: 'video-camera',
+      prefix: 'fa',
+      markerColor: 'pink',
+      popupAnchor: [0, -38]
+  });
+
+
+
+  var iconType = {
+      "green": "film",
+      "pink": "video-camera"
+  };
+
+
+  var pointLayer = L.geoJson(null, {
+      pointToLayer: function(feature, latlng) {
+          return L.marker(latlng, {
+              icon: L.AwesomeMarkers.icon({
+                  icon: iconType[feature.properties.color],
+                  prefix: 'fa',
+                  markerColor: feature.properties.color,
+                  popupAnchor: [0, -38]
+              }),
+              title: feature.properties.provided_name,
+              riseOnHover: true
+          });
+      },
+      onEachFeature: function(feature, layer) {
+          if (feature.properties) {
+              var content = '<b>' + feature.properties.provided_name + '</b>' +
+                  '<br>' + feature.properties.description;
+              layer.bindPopup(content);
+          }
+      }
+  });
+  $.getJSON("data/points.geojson", function(data) {
+      pointLayer.addData(data);
+      map.fitBounds(pointLayer);
+  });
+
+  map.addLayer(pointLayer);
