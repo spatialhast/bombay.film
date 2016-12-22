@@ -13,3 +13,8 @@ body,
 .leaflet-popup-content {
     margin: 7px;
 }
+
+.leaflet-popup-content img {
+    width: 300px;
+}
+

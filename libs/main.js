@@ -87,22 +87,11 @@
   bombay_1930.addTo(map);
 
 
-
-  var redMarker = L.AwesomeMarkers.icon({
-      //icon: 'film',
-      icon: 'video-camera',
-      prefix: 'fa',
-      markerColor: 'pink',
-      popupAnchor: [0, -38]
-  });
-
-
-
   var iconType = {
       "green": "film",
-      "pink": "video-camera"
+      "pink": "video-camera",
+      "yellow": "video-camera"
   };
-
 
   var pointLayer = L.geoJson(null, {
       pointToLayer: function(feature, latlng) {
@@ -120,8 +109,9 @@
       onEachFeature: function(feature, layer) {
           if (feature.properties) {
               var content = '<b>' + feature.properties.provided_name + '</b>' +
+					//'<br>' + '<img src="/data/' + feature.properties.number + '.png" style="width: 301px">' +
                   '<br>' + feature.properties.description;
-              layer.bindPopup(content);
+              layer.bindPopup(content, {maxWidth: 450});
           }
       }
   });
