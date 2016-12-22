@@ -90,7 +90,7 @@
   var iconType = {
       "green": "film",
       "pink": "video-camera",
-      "yellow": "video-camera"
+      "orange": "film"
   };
 
   var pointLayer = L.geoJson(null, {
@@ -100,6 +100,7 @@
                   icon: iconType[feature.properties.color],
                   prefix: 'fa',
                   markerColor: feature.properties.color,
+                  //iconColor: feature.properties.color,
                   popupAnchor: [0, -38]
               }),
               title: feature.properties.provided_name,
