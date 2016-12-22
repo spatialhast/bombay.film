@@ -85,3 +85,50 @@
 
   layerMapboxLight.addTo(map);
   bombay_1930.addTo(map);
+  
+  
+  
+  
+ 
+            var mki = new L.icon({
+                iconUrl: 'data/pilots.png',
+                iconAnchor: [16, 16],
+                popupAnchor: [0, -16]
+            });
+    
+              var pointLayer = L.geoJson(null, {
+                pointToLayer: function(feature, latlng) {
+                    return L.marker(latlng, {
+                        //icon: mki,
+                        title: feature.properties.provided_name,
+                        riseOnHover: true
+                    });
+                },
+                onEachFeature: function(feature, layer) {
+                    if (feature.properties) {
+                        var content = '<b>' + feature.properties.provided_name + '</b>' +
+                            '<br>' + feature.properties.description;
+                            
+                        layer.bindPopup(content);
+                    }
+                }
+            });
+            $.getJSON("data/points.geojson", function(data) {
+                pointLayer.addData(data);
+                map.fitBounds(pointLayer);
+            });
+            
+            map.addLayer(pointLayer);
+            
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
