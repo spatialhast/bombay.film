@@ -93,6 +93,17 @@
       "orange": "film"
   };
 
+
+  var sidebar = L.control.sidebar('sidebar', {
+      closeButton: true,
+      position: 'left'
+  });
+  map.addControl(sidebar);
+
+  map.on('click', function() {
+      sidebar.hide();
+  });
+
   var pointLayer = L.geoJson(null, {
       pointToLayer: function(feature, latlng) {
           return L.marker(latlng, {
@@ -100,22 +111,21 @@
                   icon: iconType[feature.properties.color],
                   prefix: 'fa',
                   markerColor: feature.properties.color,
-                  //iconColor: feature.properties.color,
                   popupAnchor: [0, -38]
               }),
               title: feature.properties.provided_name,
               riseOnHover: true
           });
-      },
-      onEachFeature: function(feature, layer) {
-          if (feature.properties) {
-              var content = '<b>' + feature.properties.provided_name + '</b>' +
-					//'<br>' + '<img src="/data/' + feature.properties.number + '.png" style="width: 301px">' +
-                  '<br>' + feature.properties.description;
-              layer.bindPopup(content, {maxWidth: 450});
-          }
       }
+  }).on('click', function(event) {
+
+      var content = '<h2>' + event.layer.feature.properties.provided_name + '</h2>' +
+          event.layer.feature.properties.description;
+
+      sidebar.setContent(content);
+      sidebar.show();
   });
+
   $.getJSON("data/points.geojson", function(data) {
       pointLayer.addData(data);
       map.fitBounds(pointLayer);

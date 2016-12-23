@@ -14,7 +14,7 @@ body,
     margin: 7px;
 }
 
-.leaflet-popup-content img {
-    width: 300px;
+#sidebar img {
+    width: 400px;
 }
 
