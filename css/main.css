@@ -1,0 +1,322 @@
+
+    body 
+
+    /* -------------------- FONT FAMILY ------------------------- */
+    {
+        background-color: white;
+        font-family: 'Open Sans';
+        font-size: 21px;
+        font-weight: 400;
+        
+        color: #000;
+        line-height: 1em;
+        
+        /*
+        letter-spacing: -0.01625em;
+        */
+
+    }
+
+    .yellow-bg {
+        background-color: #fce703;
+    }
+
+    .blue-bg {
+        background-color: #28a9e1;
+    }
+    /* Cross Line */
+    .left-col:before,
+    .upper-col:before,
+    .right-col:before {
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: 4;
+    }
+
+    .main.container {
+        width: 100%;
+    }
+
+
+    #map {}
+
+
+    /* -------------------- BLOCK: HEADER ------------------------- */
+
+    /* Course Title heading text */
+    .col-first h5 {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+    }
+    
+    /* Heading background */
+    .col-first.col-sm-3 {
+        color: #000;
+    }
+
+    .row.top-row {
+         border-bottom: 2px solid black;
+
+    }
+/* ------------------------------------------------------------ */
+
+a {
+    color: black;
+}
+a:hover,
+a:focus {
+    color: black;
+    text-decoration: underline;
+}
+.row.top-row {
+    padding: 20px;
+}
+.row.top-row h5 {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 20px;
+}
+.mid-column .row {
+    color: #000;
+    display: block;
+    height: 100%;
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.3em;
+    font-size: 16px;
+    font-weight: 400;
+}
+#sticky-menu {
+    position: relative;
+    left: 28px;
+    padding-top: 6px;
+
+}
+
+#sticky-menu ul.c4sr-nav li a {
+    font-size: 80%;
+}
+
+#nav > li > a {
+    font-size: 80%;
+
+}
+#sticky-menu a:hover {
+    text-decoration: underline;
+}
+#sticky-menu li a img {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+}
+
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background: none;
+}
+
+.nav>li>a>img {
+  max-width: none;
+  width: 8%;
+  padding-right: 9px;
+  margin-left: 30px;
+}
+.affix {
+    top: 20px;
+}
+.img-padding {
+    padding: 20px;
+}
+.body-text {
+    line-height: 1.3em;
+    font-size: 16px;
+}
+.body-text h5 {
+    font-weight: 700;
+    font-size: 22px;
+    padding: 0;
+}
+.footnote {
+    display: inline;
+    font-size: 66%;
+    position: relative;
+    top: -6px;
+    padding: 0;
+}
+/*----CHANGE: use the px values here to adjust position of footnotes*/;
+
+.footnote-ref {
+    position: relative;
+    font-size: 70%;
+}
+
+.footnote-ref-1{
+    top: 410px;
+}
+
+.footnote-ref-2 {
+    top: 800px;
+}
+
+.footnote-ref-3 {
+    top: 960px;
+}
+
+
+
+
+@media (max-width: 991px) {
+    ul.c4sr-nav {
+        display: none;
+    }
+
+    /* footnotes */
+    
+
+    
+}
+
+/* ---------- DO NOT CHANGE -- Mobile Compatibility -----------------*/
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    /* iphone 4 */
+
+}
+
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    /* iphone 5 */
+
+.main.container {
+  width: 95%;
+}
+
+ .body-text {
+  line-height: 1.3em;
+  font-size: 70%;
+  width: 90%;
+}
+
+.body-text h5 {
+  font-weight: 300;
+  padding: 0;
+  font-size: 130%;
+}
+
+.row.top-row h5 {
+ font-size: 70%;
+ font-weight: 300;
+ padding: 0;
+}
+
+.row.top-row {
+    padding: 0;
+    border: none;
+}
+
+.img-padding {
+    padding: 0;
+}
+
+.img-padding img {
+    width: 95%;
+    height: auto;
+}
+
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    /* iphone 6 */
+
+ .body-text {
+  line-height: 1.3em;
+  font-size: 70%;
+  width: 90%;
+}
+
+.row.top-row h5 {
+ font-size: 70%;
+ font-weight: 300;
+ padding: 0;
+}
+
+.row.top-row {
+    padding: 0;
+    border: none;
+}
+
+.img-padding {
+    padding: 0;
+}
+
+.img-padding img {
+    width: 95%;
+    height: auto;
+}
+
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    /* 6plus */
+
+}
+
+iframe {
+    border-width: 1px;
+}
+
+.sdendnotesym {
+	color: #0563c1;
+	font-size: 10pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

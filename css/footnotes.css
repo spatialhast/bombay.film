@@ -1,0 +1,71 @@
+.affix {
+    top: 20px;
+}
+.img-padding {
+    padding: 20px;
+}
+.body-text {
+    line-height: 1.3em;
+    font-size: 16px;
+}
+.body-text h5 {
+    font-weight: 700;
+    font-size: 22px;
+    padding: 0;
+}
+.
+
+
+.footnote {
+    display: inline;
+    position: relative;
+    top: -6px;
+    padding: 0;
+}
+
+
+/*
+.footnote-ref {
+	position: relative;
+}
+*/
+
+
+
+
+/* CHANGE: Adjust the number of px to change footnote position
+.footnote-ref-1-d {
+    top: 400px;
+}
+
+.footnote-ref-2-d {
+    top: 528px;
+}
+
+.footnote-ref-3-d {
+    top: 687px;
+}
+
+.footnote-ref-4-d {
+    top: 928px;
+}
+
+.footnote-ref-5-d {
+    top: 1008px;
+}
+
+ */
+
+
+
+@media (max-width: 991px) {
+    ul.c4sr-nav {
+        display: none;
+    }
+}
+
+
+
+
+
+

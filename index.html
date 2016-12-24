@@ -1,49 +1,2199 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Bombay film</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="libs/favicon.png" />
+<!-- Bombay film
+   Center for Spatial Research
+   Madeeha Merchant (mym2107@columbia.edu)
 
-    <link rel="stylesheet" href="libs/leaflet-0.7.7/leaflet.css" />
-    <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="libs/leaflet-sidebar-0.1.9/L.Control.Sidebar.css" />
-    <link rel="stylesheet" href="libs/leaflet.awesome-markers-2.0.2/leaflet.awesome-markers.css" />
-    <link rel="stylesheet" href="libs/style.css" />
+   ================================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bombay film</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link type="text/css" hrel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <!-- TODO - optimize and consolidate files -->
+    <link href='css/main.css' rel='stylesheet' />
+    <link href='css/footnotes.css' rel='stylesheet' />
 </head>
 
 <body>
+    <div class="container main">
+        <div class="row top-row">
+            <div class="col-md-12">
+                <!-- this link can go to the homepage of the course that is developed after the semester ends-->
+                <h5><a href="index.html">Bombay/Mumbai and its Urban Imaginaries</a></h5>
+                <h5>Social Transformation Through the Lens of Cinema: Mapping the 1930s Talkie</h5>
+                <div class="img-padding">
+                    <img src="img/Header1800x350.jpg" class="img-responsive" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- menu -->
+            <div class="col-md-3 scrollspy">
+                <div id="sticky-menu ">
+                    <br>
+                    <ul id="nav" class="nav c4sr-nav" data-spy="affix">
+                        <li>
+                            <a href="#section_one"><img src="img/dot-1.png" />Introduction</a>
+                        </li>
+                        <li>
+                            <a href="#section_three"><img src="img/dot-1.png" />One Big Family</a>
+                        </li>
+                        <li>
+                            <a href="#section_four"><img src="img/dot-1.png" />The Social Film</a>
+                        </li>
+                        <li>
+                            <a href="#section_six"><img src="img/dot-1.png" />Cinema spaces</a>
+                        </li>
+                        <li>
+                            <a href="#section_seven"><img src="img/dot-1.png" />Conclusion</a>
+                        </li>
+                        <li>
+                            <a href="#section_eight"><img src="img/dot-1.png" />Bibliography</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- main -->
+            <div class="col-md-6 body-text">
+                <br>
+                <h5 id="section_one" align="center">Social Transformation Through the Lens of Cinema: Mapping the 1930s Talkie</h5>
+                <br>
 
-    <div id="sidebar">
-        <h1>leaflet-sidebar</h1>
+                <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">The
+beginnings of Mumbai’s local film market looked nothing like the
+billion-dollar industry it has become today. </font><font color="#000000"><font face="Times New Roman, serif">In
+its early stages, </font></font><font color="#000000"><font face="Times New Roman, serif">as
+Indian film scholar Kaushik Bhaumik explains, </font></font><font color="#000000"><font face="Times New Roman, serif">cinema
+</font></font><font color="#000000"><font face="Times New Roman, serif">was
+considered a disreputable </font></font><font color="#000000"><font face="Times New Roman, serif"><I>bazaar
+</I></font></font><font color="#000000"><font face="Times New Roman, serif">institution,
+a sentiment </font></font><font face="Times New Roman, serif">influenced
+by both the pronounced class-status hierarchies of Indian society and
+anxieties about female public performance.<a class="sdendnoteanc" name="sdendnote1anc" href="#sdendnote1sym"><SUP>1</SUP></A></font><font face="Times New Roman, serif">
+Homegrown silent films in Hindu, such as Phalke’s </font><font color="#000000"><font face="Times New Roman, serif">mythologicals,
+enjoyed only small viewership and even by 1917, many were still
+blissfully unaware of his achievements.<a class="sdendnoteanc" name="sdendnote2anc" href="#sdendnote2sym"><SUP>2</SUP></A>
+</font></font><font color="#000000"><font face="Times New Roman, serif">Thus,
+film audiences in Bombay, as Mumbai was then called, privileged
+Western products over indigenous ones. Starting with the </font></font><font face="Times New Roman, serif">screening
+of the Lumière Brothers’ short clips in the Watson Theatre in 1896
+and continuing through the late 1920s, about 90 percent of films
+screened in India were foreign imports.<a class="sdendnoteanc" name="sdendnote3anc" href="#sdendnote3sym"><SUP>3</SUP></A></font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">As the 1928 </font><font face="Times New Roman, serif"><I>Report
+of the Indian Cinematograph Committee </I></font><font face="Times New Roman, serif">found,
+nearly 80 percent of those released features were American.<a class="sdendnoteanc" name="sdendnote4anc" href="#sdendnote4sym"><SUP>4</SUP></A></font><font face="Times New Roman, serif">
+</font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">The
+arrival of the first Indian sound film forever changed the film
+market in Bombay. Ardeshi Irani’s 1931 </font><font face="Times New Roman, serif"><I>Alam
+Ara</I></font><font face="Times New Roman, serif"> was never
+described as an artistic triumph, but to see that film surging crowds
+filled the Majestic Theater and there even developed a black market
+for tickets</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote5anc" href="#sdendnote5sym"><SUP>5</SUP></A>
+In the long-term, the advent of sound freed India’s local industry
+from competition with imported films and thus led to the expansion of
+indigenous cinema.<a class="sdendnoteanc" name="sdendnote6anc" href="#sdendnote6sym"><SUP>6</SUP></A>
+</font><font face="Times New Roman, serif">Indeed, by 1935, 90
+percent of the films exhibited in Bombay were Indian productions</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote7anc" href="#sdendnote7sym"><SUP>7</SUP></A>
+</font><font color="#000000"><font face="Times New Roman, serif">As
+Indian film scholar Firoze Rangoonwalla wrote, </font></font><font face="Times New Roman, serif">Hindi
+cinema came of age with the emergence of talking pictures, popularly
+called talkies: “It was like a second birth of cinema, marked by
+the advent of a whole new structure and format.”<a class="sdendnoteanc" name="sdendnote8anc" href="#sdendnote8sym"><SUP>8</SUP></A></font></p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">While
+early silent film failed to lay the foundation of an organized and
+respectable industry in Bombay, the talkie era succeeded
+overwhelmingly. Led by an overarching optimism, several sound studios
+were established in Bombay between the mid-1930s and mid-1940s. The
+new film industry offered possibilities for employment and social
+interaction that did not exist before – and new ideas about class
+and gender started to proliferate in the wake of Indian nationalism.
+As leisure grew and </font><font face="Times New Roman, serif">notions
+of public and private discourse changed</font><font face="Times New Roman, serif">,
+the movie-going demographic was broadened: Bombay’s films now
+attracted a more heterogeneous audience, which included members of
+the upper, middle, as well as working classes. In Bombay, the early
+1930s were an epoch of tremendous socio-cultural change – a change
+parallel by the advent of its local sound studios.</font><font face="Times New Roman, serif"><B>
+</B></font><font face="Times New Roman, serif">Not only were these
+social transformations mirrored in the emerging talkie industry, but
+rather nurtured and encouraged.</font><font face="Times New Roman, serif"><B>
+</B></font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">In
+this context, this essay will argue that the film industry of the
+1930s served as both a reflective mirror to society and active
+historical agent of socio-cultural change. It will first briefly
+discuss Bombay’s indigenous mercantile class, the Parsi, who played
+a crucial role in the economic and cultural development of Bombay.
+</font><font face="Times New Roman, serif">Next we will examine two
+important films produced by those studios:</font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">Bombay Talkies’ first
+Hindi production, the social film </font><font face="Times New Roman, serif"><I>Achhut
+Kanya</I></font><font face="Times New Roman, serif">, or “Untouchable
+Girl” (1936), and Wadia Movietone’s wildly successful stunt film
+</font><font face="Times New Roman, serif"><I>Hunterwali</I></font><font face="Times New Roman, serif">
+(1935), the first of the renowned “Fearless Nadia” series.</font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">The lead actresses of
+these two films – Devika Rani, the “first lady of Indian cinema”
+and Nadia, “India’s queen of the box office”, will be
+considered for the ways in which they reflected new conceptions of
+Indian femininity.<a class="sdendnoteanc" name="sdendnote9anc" href="#sdendnote9sym"><SUP>9</SUP></A>
+The essay will conclude with an explication of the ways in which the
+cinemas where those film premiered – the Roxy Cinema, located in
+Giragaum, and Super Cinema, located on Grant Road – reflected and
+inspired social changes in India. </font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">The
+documentation of the social-historical changes engendered by and
+evident in early Bombay cinema comes in variety of sources. For
+primary research, a combination of newspaper articles of the Times of
+India dating back to the 1930s, oral histories and autobiographies,
+official census data, and the 1927-1928 </font><font face="Times New Roman, serif"><I>Report
+of the Indian Cinematograph Committee</I></font><font face="Times New Roman, serif">
+have been conducted. Furthermore, a map of 1930s Bombay has been
+constructed to provide the reader with a contextual overview of
+Bombay Talkies and Wadia Movietone. Showcasing their studio locations
+as well as Roxy and Super Cinema, it will be from particular
+importance at the last chapter of this essay. Overall, the spatial
+representation will, on the one hand, serve as a contextual
+background, as several oral histories are mapped onto Bombay’s
+urban space. On the other hand, it will provide the reader with a
+visual overview of the various locales discussed in this paper. </font>
+                </p>
 
-        <p>A responsive sidebar plugin for for <a href="http://leafletjs.com/">Leaflet</a>, a JS library for interactive maps.</p>
+                <br/>
+                <iframe src="https://spatialhast.github.io/bombay.film/map" style="width: 100%; height: 600px;"> </iframe>
+                <small>Mapping Bombay Talkies and Wadia Movietone</small>
+                <br/>
+                <br/>
+                <h5 id="section_two">Why Bombay?</h5>
+                <br>
 
-        <p><b>Click on the marker to show the sidebar again when you've closed it.</b></p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">Beginning
+in 1931, as Columbia University film scholar Debrashree Mukherjee
+wrote, </font><font face="Times New Roman, serif">the film industries
+of Calcutta, Madras, Lahore, and Bombay were “competing to win the
+talkie race.”<a class="sdendnoteanc" name="sdendnote10anc" href="#sdendnote10sym"><SUP>10</SUP></A>
+</font><font face="Times New Roman, serif">By 1938, however, Bombay
+cinema had established itself as the winner, in large part because of
+the language it chose for its films.</font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">With myriad of tongues
+spoken in India, Bombay’s filmmakers settled on Hindustani – a
+widely understood mixture of Hindi and Urdu – for most film
+dialogue and song lyrics. According to the Bombay Census of 1931,
+Hindustani was the strongest subsidiary language in the Presidency,
+spoken by 42.4% of the population, largely because of the steady
+immigration of Punjabi and North Indian factory workers</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote11anc" href="#sdendnote11sym"><SUP>11</SUP></A>
+</font><font face="Times New Roman, serif">The Hindustani talkie
+allowed the Bombay cinema to spread into the “Hindustani heartland”
+and appeal to the labors who were increasingly migrating from those
+regions into the metropolis. Bombay became the only city in India
+that produced film outside its region’s dominant languages,
+Gujarati and Marathi.</font><font face="Times New Roman, serif">
+Overall, Bombay’s Hindi films were disassociated from any regional
+identification and portrayed a more “national character.”<a class="sdendnoteanc" name="sdendnote12anc" href="#sdendnote12sym"><SUP>12</SUP></A></font></p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font face="Times New Roman, serif">Yet language was not the only
+reason that Bombay emerged as the early cultural center of film in
+India. Its success was integrally connected to Bombay’s colonial
+history as </font><font face="Times New Roman, serif"><I>Urbs Prima
+in Indis</I></font><font face="Times New Roman, serif"> – the
+primary center of commerce and manufacturing in British India.<a class="sdendnoteanc" name="sdendnote13anc" href="#sdendnote13sym"><SUP>13</SUP></A></font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">With a bustling port,
+Bombay had connections to the world market that allowed the constant
+circulation of goods, capital, and knowledge. This led to the
+cultural, linguistic, religious, and regional diversity that became
+the hallmark of the city; by the late 19</font>
+                    <SUP><font face="Times New Roman, serif">th</font></SUP><font face="Times New Roman, serif">
+century, Bombay was distinct from other colonial settlements in India
+for its “cosmopolitan spirit” and future-oriented mindset</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote14anc" href="#sdendnote14sym"><SUP>14</SUP></A>
+</font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font face="Times New Roman, serif">Bombay possessed a powerful
+indigenous mercantile community – the Parsi – which would prove
+to be intimately linked to the success of its film industry. Parsis
+were Zoroastrians who had emigrated from Iran to Gujarat around the
+18</font>
+                    <SUP><font face="Times New Roman, serif">th</font></SUP><font face="Times New Roman, serif">
+century.<a class="sdendnoteanc" name="sdendnote15anc" href="#sdendnote15sym"><SUP>15</SUP></A></font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">Traditionally involved in
+the cotton-textile industry, shipping, and shipbuilding, these
+entrepreneurial-minded members of Bombay society diversified into
+banking by the mid-nineteenth century. Bombay’s strong economic
+infrastructure, dominated by the Parsis, allowed film technology and
+production to take root and flourish as some of the capital generated
+by other industrial and commercial enterprises flowed into it. In
+fact, Parsi capital alone played a significant role in developing the
+nascent film distribution infrastructure for both early silent
+studios in the 1920s and sound studios in the 1930s</font><font face="Times New Roman, serif">.
+</font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font face="Times New Roman, serif">Wadia Movietone, for example,
+established in 1933 by J.B.H. Wadia and younger brother Homi Wadia,
+with M. B. Bilimoria (a well-known film distributor, exhibitor, and
+agent) and the Tata brothers, was financed entirely by Parsi
+capital.<a class="sdendnoteanc" name="sdendnote16anc" href="#sdendnote16sym"><SUP>16</SUP></A></font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">Wadia Movietone was
+located at Lovji Castle in the upper-class neighborhood of Parel, an
+ancestral estate of the Wadias, who were master shipbuilders for the
+British East India Company and later for the Government of India</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote17anc" href="#sdendnote17sym"><SUP>17</SUP></A>
+</font><font face="Times New Roman, serif">Its rival Bombay Talkies,
+founded by Himansu Rai and Devika Rani after their return from Europe
+in 1934, likewise enjoyed the support of a principally Parsi board of
+directors. As Bombay Talkies’ articles of incorporation show, these
+members included prominent Parsi business leaders who, by their
+interests in banks, insurance companies and investment trusts,
+represented a considerable swath of Bombay’s commercial life.<a class="sdendnoteanc" name="sdendnote18anc" href="#sdendnote18sym"><SUP>18</SUP></A></font><font face="Times New Roman, serif">
+</font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font face="Times New Roman, serif">In addition to the capital base
+necessary for filmmaking, Bombay possessed the creative
+infrastructure: It was the center of Parsi theatre, a commercial
+theatre movement that originated in the nineteenth century. Unlike
+other indigenous theatres in the same period, Parsi theatre was not
+defined by language, ethnic composition or class. Actors, writers,
+and musicians were often non-Parsi and included Hindus,
+Anglo-Indians, and Jews</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote19anc" href="#sdendnote19sym"><SUP>19</SUP></A>
+</font><font face="Times New Roman, serif">Parsi plays blended
+realism with fantasy, music with dance, and narrative with spectacle
+– an approach evident in early Indian film as well. Further, many
+of the old Parsi theatre halls were converted using Parsi capital
+into the cinemas spaces of the early twentieth century. For example,
+the Parsi film distributor and financier Kapurchand &amp; Co. owned
+multiple former theater halls which were converted into cinemas to
+serve the different classes that attended Bombay’s early cinema,
+including the upscale Roxy and second-tier Super Cinema –and it was
+Kapurchand that became the distributor for both Bombay Talkies and
+Wadia Movietone.<a class="sdendnoteanc" name="sdendnote20anc" href="#sdendnote20sym"><SUP>20</SUP></A></font></p>
 
-        <p>Other examples:</p>
+                <br/>
+                <h5 id="section_three">Labor in the One-Big-Family Studio System</h5>
+                <br>
 
-        <ul>
-            <li><a href="listing-markers.html">listing-markers example</a></li>
-            <li><a href="two-sidebars.html">two-sidebars example</a></li>
-        </ul>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font face="Times New Roman, serif">From their inception, both Bombay
+Talkies and Wadia Movietone operated as employers in ways that had
+not existed before them. </font><font face="Times New Roman, serif">At
+the same time, the recruiting patterns of both studios mirrored the
+social transformation of Bombay’s labor force in the 1930s. There
+was a new kind of worker emerging in the city: young, literate, and
+eager to work in the film industry. </font><font color="#000000"><font face="Times New Roman, serif">As
+the Census of 1931 </font></font><font face="Times New Roman, serif">reported,
+Bombay was “becoming a place where the wage-earners are being drawn
+increasingly from the younger age-groups.” Further reading of the
+1931 Census also shows: “It is likely ... that cinema players and
+dramatic companies are responsible for some increase in the
+population.”<a class="sdendnoteanc" name="sdendnote21anc" href="#sdendnote21sym"><SUP>21</SUP></A>
+As Prakash confirms in </font><font face="Times New Roman, serif"><I>Mumbai
+Fables</I></font><font face="Times New Roman, serif">, “writers and
+artists from North India flocked to the city, seeking opportunities
+to practice their craft in newspapers, literary journals, and the
+growing film industry.”<a class="sdendnoteanc" name="sdendnote22anc" href="#sdendnote22sym"><SUP>22</SUP></A>
+Not only was the newly emerging film studio system attractive to the
+young people pouring into Bombay. Far more, it seemed to have been
+the explicit reason for many to move to Bombay. </font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font face="Times New Roman, serif">Bombay Talkies and Wadia
+Movietone both offered working conditions under the umbrella of the
+“one-big-family studio system”, which hitherto did not exist.<a class="sdendnoteanc" name="sdendnote23anc" href="#sdendnote23sym"><SUP>23</SUP></A>
+For this discussion, it is important to emphasize the socio-political
+climate of Bombay to that time. The modern metropolitan milieu of the
+city was subject to thoughts of anti-colonialism, as Congress
+activists were heralding nationalist distress. At the same time,
+communists organized mill-workers for violent actions, such as the
+1928-29 textile strikes.<a class="sdendnoteanc" name="sdendnote24anc" href="#sdendnote24sym"><SUP>24</SUP></A>
+Meanwhile, Hindu-Muslim assaults and counterassaults took place in
+mill districts throughout the 1920s and well into the 1930s.<a class="sdendnoteanc" name="sdendnote25anc" href="#sdendnote25sym"><SUP>25</SUP></A>
+As the following will show, it is precisely this climate of national
+struggle and social conflict, which influenced Bombay Talkies’ and
+Wadia Movietone’s working environment: Both companies regarded
+l</font><font color="#000000"><font face="Times New Roman, serif">abor,
+caste, and class from a humanitarian viewpoint, which in turn allowed
+for an emancipated, egalitarian worker. </font></font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font color="#000000"> </font><font face="Times New Roman, serif">The
+influence of </font><font color="#000000"><font face="Times New Roman, serif">Ideals
+of betterment, social service and nationalist reform are best
+exemplified in Bombay Talkies’ democratic working conditions. </font></font><font face="Times New Roman, serif">At
+Bombay Talkies, all workers, regardless their role, were considered
+to be of equal of status. A</font><font color="#000000"><font face="Times New Roman, serif">
+star system had yet to be developed; lead actors and actresses were
+employees of the studio and were treated like any other worker. In
+fact, actors and actresses did not receive significantly more pay
+than other employees.<a class="sdendnoteanc" name="sdendnote26anc" href="#sdendnote26sym"><SUP>26</SUP></A></font></font><font color="#000000"><font face="Times New Roman, serif">
+</font></font><font face="Times New Roman, serif">Further,
+recruitment was made strictly on merit: “Caste, creed, and religion
+had no say in it.”<a class="sdendnoteanc" name="sdendnote27anc" href="#sdendnote27sym"><SUP>27</SUP></A>
+Once one became part of the family that was Bombay Talkies, it was
+also known that all company members, of whatever caste, ate together
+at the company canteen. </font><font face="Times New Roman, serif">As
+historian Erik Barnouw noted in </font><font face="Times New Roman, serif"><I>Indian
+Film</I></font><font face="Times New Roman, serif">, Rai seems to
+have been influenced by ideas of self-help going back to memories of
+Ghandi’s visit to the Rabindranath Tagore ashram of Santiniketan:
+On occasion, even Bombay Talkies’ top actors would help clean the
+studio’s floors</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote28anc" href="#sdendnote28sym"><SUP>28</SUP></A>
+</font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font color="#000000"><font face="Times New Roman, serif">This notion
+of “giving back” speaks to the et</font></font><font face="Times New Roman, serif">hos
+of social service that emerged in the late nineteenth century, when
+members of the educated middle class first began to engage in novel
+forms of civic activism in their quest for public leadership.<a class="sdendnoteanc" name="sdendnote29anc" href="#sdendnote29sym"><SUP>29</SUP></A></font><font face="Times New Roman, serif">
+</font><font color="#000000"><font face="Times New Roman, serif">Having
+already produced widely successful German-Indian co-productions, such
+as the silent films </font></font><font color="#000000"><font face="Times New Roman, serif"><I>The
+Light of Asia</I></font></font><font color="#000000"><font face="Times New Roman, serif">
+(1924) and </font></font><font color="#000000"><font face="Times New Roman, serif"><I>A
+Throw of Dice </I></font></font><font color="#000000"><font face="Times New Roman, serif">(1926),
+Himansu Rai could have easily continued his career outside India.<a class="sdendnoteanc" name="sdendnote30anc" href="#sdendnote30sym"><SUP>30</SUP></A>
+</font></font><font color="#000000"><font face="Times New Roman, serif">However,
+as he told Devika Rani, his major female star and partner in both
+business and love, Rai was inclined to bring what he had gleaned of
+film production in Germany to India: “let us learn from these
+people, but let us put the knowledge to work in our country</font></font><font color="#000000"><font face="Times New Roman, serif">.”<a class="sdendnoteanc" name="sdendnote31anc" href="#sdendnote31sym"><SUP>31</SUP></A>
+</font></font><font face="Times New Roman, serif">His statement also
+exemplifies the reformist ideals of the Indian nationalist movement,
+which sought the betterment of Indian society: </font><font color="#000000"><font face="Times New Roman, serif">By
+building a world-class studio in his country, Rai wanted to bring
+international glory to India’s heritage.</font></font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font color="#000000"><font face="Times New Roman, serif">Similar to
+Bombay Talkies, J.B.H. Wadia of Wadia Movietone was influenced by the
+socio-political climate of the 1930s.<a class="sdendnoteanc" name="sdendnote32anc" href="#sdendnote32sym"><SUP>32</SUP></A>
+A self-proclaimed “humanist”, he </font></font><font face="Times New Roman, serif">had
+been an active member of the National Congress from 1930 to 1938 and
+founder of the Radical Democratic Party of India in 1937. In his
+autobiographical essay “Those were the Days”, J.B.H. Wadia also
+explains that he was influenced by leftist thinkers, such as the
+“non-conformist Communist” M.N. Roy. As a result, Wadia was
+deeply devoted to establishing an egalitarian workspace. For example,
+</font><font face="Times New Roman, serif">Wadia Movietone was the
+first film studio in Bombay to declare two Sundays a month as
+holidays and offer bonuses to the staff every year between 1933 and
+1942</font><font face="Times New Roman, serif">. As J.B.H Wadia makes
+highlighted, this took place at a time when “unionization did not
+yet exist in the film industry.” </font><font face="Times New Roman, serif">Wadia
+remembers fondly that in the days of the sound studio, “camaraderie
+prevailed” among the entire staff: “He who called himself the
+boss was not more equal.”<a class="sdendnoteanc" name="sdendnote33anc" href="#sdendnote33sym"><SUP>33</SUP></A></font><font face="Times New Roman, serif">
+The new sound studio was thus defined by its democratic mindset,
+which allowed for the emergence of a new kind of worker. </font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font face="Times New Roman, serif">In this context, both studios
+were indeed shaping attitudes and doing so in a variety of ways.
+</font><font color="#000000"><font face="Times New Roman, serif">Education,
+continuous self-improvement, and discipline were seen as key within
+the studio family. </font></font><font face="Times New Roman, serif">Veteran
+actor, director and producer Paidi Jairaj, looking back nostalgically
+on his days working at the studio, described the educational
+environment of the studios as “virtually like going to college.”</font><font face="Times New Roman, serif">
+Inspired by their own working experiences in Germany, Rai and Rani
+had started a trainee program, “poaching” talent from Indian
+universities. </font><font face="Times New Roman, serif">Within a few
+years, many of these trained at Bombay Talkies would go from
+anonymity to fame across India</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote34anc" href="#sdendnote34sym"><SUP>34</SUP></A>
+At the same time, for Rai, education and self-improvement would go
+hand in hand with discipline. For instance, actors and actresses
+would be replaced if they disobeyed instructions even after suitable
+warnings. As a strong disciplinarian, Rai would prefer expensive
+re-shootings over an “errant employee” anytime.<a class="sdendnoteanc" name="sdendnote35anc" href="#sdendnote35sym"><SUP>35</SUP></A>
+</font><font face="Times New Roman, serif">Like Bombay Talkies, Wadia
+Movietone was known as a strict professional workplace: When the ten
+o’clock bell rang, stars clocked in along with everyone else and a
+register was called to check for absences.<a class="sdendnoteanc" name="sdendnote36anc" href="#sdendnote36sym"><SUP>36</SUP></A></font></p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font color="#000000"><font face="Times New Roman, serif">The
+operation of emerging sound studios of the 1930s in many ways
+mirrored the multi-ethnic and diverse approach of Parsi theatre. As
+such, </font></font><font face="Times New Roman, serif">Wadia
+Movietone’s workforce included a generous representation of Parsi,
+Muslim, and other non-Hindu communities. Wadia Movietone prided
+itself on its home-grown, culturally heterogeneous talent pool of
+actors, musicians, and writers.</font>
+                    <SUP><font face="Times New Roman, serif">
+<a class="sdendnoteanc" name="sdendnote37anc" href="#sdendnote37sym"><SUP>37</SUP>
+                    </A>
+                    </font>
+                    </SUP><font face="Times New Roman, serif">
+Likewise, Bombay Talkies employed Parsi song-writers, Muslim
+screenwriters, and German technicians.<a class="sdendnoteanc" name="sdendnote38anc" href="#sdendnote38sym"><SUP>38</SUP></A>
+</font>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
+                    <font face="Times New Roman, serif">Yet, the newly emerging studios
+went one step further than Parsi theatre: </font><font color="#000000"><font face="Times New Roman, serif">Never
+in the history of colonial India had there been such a curious and
+accepting blend of different backgrounds in the workforce on such a
+large scale. </font></font><font face="Times New Roman, serif">As
+film began to be seen as a legitimate professional institution
+capable of generating lucrative and steady employment, both Bombay
+Talkies and Wadia Movietone maintained </font><font face="Times New Roman, serif">large
+organizational overheads and employed a permanent workforce. Like the
+U.S. Hollywood studios, </font><font color="#000000"><font face="Times New Roman, serif">each
+company had a wide range of personnel and almost never turned to
+outsiders for help or services</font></font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote39anc" href="#sdendnote39sym"><SUP>39</SUP></A></font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">During the 1930s, Bombay
+Talkies had a staff of more than 400 Indian artists, technicians, and
+assistants. By the late 1930s, around 600 people were on Wadia
+Movietone’s payroll.<a class="sdendnoteanc" name="sdendnote40anc" href="#sdendnote40sym"><SUP>40</SUP></A>
+</font><font color="#000000"><font face="Times New Roman, serif">As
+M. A. Oommen and K. V. Joseph argue in </font></font><font face="Times New Roman, serif"><I>Economics
+of Indian Cinema, </I></font><font face="Times New Roman, serif">the
+</font><font color="#000000"><font face="Times New Roman, serif">self-sufficient
+studio system could only exist because of the widespread acceptance
+of low salaries.</font></font>
+                    <SUP><font color="#000000"><font face="Times New Roman, serif">
+<a class="sdendnoteanc" name="sdendnote41anc" href="#sdendnote41sym"><SUP>41</SUP>
+                    </A>
+                    </font>
+                    </font>
+                    </SUP><font color="#000000"><font face="Times New Roman, serif">
+</font></font><font color="#000000"><font face="Times New Roman, serif">Bearing
+in mind that 1930s were also a time of worldwide </font></font><font face="Times New Roman, serif">depression,
+in </font><font face="Times New Roman, serif"><I>Indian Film </I></font><font face="Times New Roman, serif">Barnouw
+explains that the prospect of steady employment outweighed all
+considerations of pay level.</font>
+                    <SUP><font face="Times New Roman, serif">
+<a class="sdendnoteanc" name="sdendnote42anc" href="#sdendnote42sym"><SUP>42</SUP>
+                    </A>
+                    </font>
+                    </SUP>
+                </p>
+                <p style="text-indent: 0.5in; margin-bottom: 0in; widows: 0; orphans: 0">
 
-        <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <br/>
+                    <h5 id="section_four">The Social Film – A call for Reform and National Propaganda</h5>
+                    <br>
 
-        <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">	</font><font face="Times New Roman, serif">By
+the 1930s, Bombay was “the place to be if you were a writer, an
+artist, or a radical political activist”, claims Gyan Prakash in
+</font><font face="Times New Roman, serif"><I>Mumbai Fables</I></font><font face="Times New Roman, serif">.
+</font><font color="#000000"><font face="Times New Roman, serif">As
+the political capital of the Presidency, Bombay emerged as one of the
+principal bastions of nationalist politics in the period. Most
+influentially, </font></font><font face="Times New Roman, serif">Mahatma
+Ghandi had rapidly transformed the landscape of nationalist politics
+in Bombay after World War I. Through his ceaseless efforts to raise
+up the weaker sections of Bombay society, Ghandi originated a kind of
+social activism that </font><font color="#000000"><font face="Times New Roman, serif">sought
+to transcend the identities of caste and creed</font></font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote43anc" href="#sdendnote43sym"><SUP>43</SUP></A>
+</font><font face="Times New Roman, serif">With the Freedom Movement
+and corresponding social reform movements, Bombay in the 1930s was
+unlike its earlier incarnations. As Kaushik Bhaumik explained in his
+dissertation, from that point on the film industry put its
+productions in the service of nationalism and social reform</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote44anc" href="#sdendnote44sym"><SUP>44</SUP></A>
+</font><font face="Times New Roman, serif">In line with the popular
+reformist mindset, writers did not shrink from stories that attacked,
+implicitly and often explicitly, the tenets of Hindi society</font><font face="Times New Roman, serif">.
+Both </font><font face="Times New Roman, serif"><I>Acchut Kanya </I></font><font face="Times New Roman, serif">and
+</font><font face="Times New Roman, serif"><I>Hunterwali</I></font><font face="Times New Roman, serif">
+symbolize these reformist ideals and nationalism – explicitly and
+implicitly. </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">	</font><font face="Times New Roman, serif">The
+social films of Bombay Talkies were mainly rural dramas with social
+reformist themes centering on the prejudice and exploitation that
+plagued village communities. For instance, </font><font face="Times New Roman, serif"><I>Achhut
+Kanya</I></font><font face="Times New Roman, serif"> tells the story
+of the love of a Brahmin youth (Ashok Kumar) for a Dalit – that is,
+Untouchable – girl (Devika Rani). </font><font face="Times New Roman, serif">Because
+of their village communities, they have to marry within their own
+castes. When the tragic lovers meet at the end of the film, the
+girl’s husband, provoked by the villagers, attacks the Brahmin.
+While trying to separate the two, the dalit girl, Kasturi, is killed
+by a train.<a class="sdendnoteanc" name="sdendnote45anc" href="#sdendnote45sym"><SUP>45</SUP></A>
+Between 1936 and 1939, Bombay Talkies was known for producing rurally
+based dramas with social reformist themes centering on the prejudices
+and exploitations of village communities.<a class="sdendnoteanc" name="sdendnote46anc" href="#sdendnote46sym"><SUP>46</SUP></A>
+</font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">The
+film was highly acclaimed for tackling the serious problems
+surrounding the caste system and untouchability – responding to
+contemporary discussions initiated by Gandhi and other reformists.
+Already during the later 19</font>
+                        <SUP><font face="Times New Roman, serif">th</font></SUP><font face="Times New Roman, serif">
+century, the problems of untouchability and a “social uplift of the
+depressed classes” were being discussed by the reformist Hindu
+upper classes. Many liberal and English-educated Hindus began to view
+“the caste system as a pernicious and irrational mode of social
+organization that was an impediment to the progress of the Hindu
+‘nation’.” </font><font face="Times New Roman, serif">As
+reformist Hindu upper classes were discussing the problem of
+untouchability, “social uplift of the depressed classes” was
+brought forward.<a class="sdendnoteanc" name="sdendnote47anc" href="#sdendnote47sym"><SUP>47</SUP></A>
+At the same time, in Bombay, dalits began to demand civil and
+political rights and recognition as Hindus around the turn of the
+century.<a class="sdendnoteanc" name="sdendnote48anc" href="#sdendnote48sym"><SUP>48</SUP></A>
+</font><font face="Times New Roman, serif">Overall, the Untouchable
+became a powerful symbol of Indian reform. </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">While
+Bombay Talkies’ </font><font face="Times New Roman, serif"><I>Achhut
+Kanya </I></font><font face="Times New Roman, serif">is the
+embodiment of the social film and Bombay Talkies’ nationalist
+tendencies, Wadia Movietone’s </font><font face="Times New Roman, serif"><I>Hunterwali
+</I></font><font face="Times New Roman, serif">found itself at a
+crossroads between the popular action/stunt genre and higher social
+ambitions. Still, </font><font face="Times New Roman, serif">J.B.H
+Wadia proclaims that he always made sure to include social messages.
+While he admits that thrills, fast action, and slapstick comedy had a
+big impact on the success of his film, “there was always something
+more, something different in them.”<a class="sdendnoteanc" name="sdendnote49anc" href="#sdendnote49sym"><SUP>49</SUP></A>
+As such, he tried to raise their social value by weaving in burning
+problems of the day.</font><font color="#262626"><font face="Times New Roman, serif">
+</font></font><font color="#262626"><font face="Times New Roman, serif">Generally,
+Wadia Movietone’s films were given little critical respect,
+particularly compared to Bombay Talkies’. As author Rosie Thomas
+said, this was due to “not least sheer snobbery: their primary
+audiences were proletarian and the films were unabashed commercial
+entertainment.”<a class="sdendnoteanc" name="sdendnote50anc" href="#sdendnote50sym"><SUP>50</SUP></A></font></font><font color="#262626"><font face="Times New Roman, serif">
+</font></font><font color="#262626"><font face="Times New Roman, serif">At
+the same time, the stunt film was </font></font><font face="Times New Roman, serif">regarded
+less as a genre of “ill repute” than a genre of little
+consequence. In its very essence then, the stunt film held carried
+little weight within context of contemporary national and social
+politics</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote51anc" href="#sdendnote51sym"><SUP>51</SUP></A>
+</font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">Yet,
+like </font><font face="Times New Roman, serif"><I>Achhut Kanya</I></font><font face="Times New Roman, serif">,
+the Fearless Nadia films have a </font><font color="#262626"><font face="Times New Roman, serif">place
+in the discourse of nationalism and the framework for social change.
+</font></font><font face="Times New Roman, serif">The 1935 film
+</font><font face="Times New Roman, serif"><I>Hunterwali, </I></font><font face="Times New Roman, serif">“Woman
+with the Whip”, was the first of the successful Wadia Movietone’s
+“</font><font color="#262626"><font face="Times New Roman, serif">Fearless
+Nadia” series, starring the actress Mary Evans as “Fearless
+Nadia. </font></font><font face="Times New Roman, serif">The plot
+follows a princess who sets out to rescue her father, held captive by
+a scheming minister. Disguising herself as a man, she roams the
+countryside, robbing rich to feed the poor, and, in the course of her
+travels, meets a peasant boy and falls in love. Throughout the film,
+“Fearless Nadia” stuns the audience with stunt movements of
+various kinds. </font><font color="#262626"><font face="Times New Roman, serif">Coming
+at a time when India was struggling for independence, the Nadia films
+served as subtle nationalist propaganda, because the actress who
+played the heroine, as the daughter of a British soldier, became a
+cult cinematic symbol of the Indian struggle for freedom. As Nadia
+herself explained, “In all the pictures there was a propaganda
+message, something to fight for, for example for people to educate
+themselves or to become a strong nation.”<a class="sdendnoteanc" name="sdendnote52anc" href="#sdendnote52sym"><SUP>52</SUP></A></font></font><font color="#262626"><font face="Times New Roman, serif">
+Wenner, who has extensively written about the Fearless Naida series,
+claims that Nadia became the cult cinematic symbol of the Indian
+struggle for freedom.</font></font><font face="Times New Roman, serif">
+As German film scholar Dorothee Wenner further explains, there is an
+argument for the social potency of the genre itself. Under its
+seemingly frivolous veneer, the films hold socially and aesthetically
+serious motivations. The spectacle of the genre masks a serious
+articulation of nationalist aspirations toward independence in
+narratives of struggle against usurping authority. From this
+perspective, the films’ stunt genre status also disguised from
+British censors the real underlying intent of these films.<a class="sdendnoteanc" name="sdendnote53anc" href="#sdendnote53sym"><SUP>53</SUP></A></font><font color="#262626"><font face="Times New Roman, serif">
+</font></font><font face="Times New Roman, serif">Thus, stunt films
+in general and </font><font face="Times New Roman, serif"><I>Hunterwali
+</I></font><font face="Times New Roman, serif">in particular offered
+a nationalist anti-establishment allegory set safely in a legendary
+or fantasy space.</font></p>
 
-        <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <br/>
+                    <h5 id="section_five">“The Queen of Indian Cinema” & “The Queen of the Box Office”</h5>
+                    <br>
 
-        <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">In
+1930s Bombay, ideas of gender and womanhood were subject to vast
+social change. The nationalist project played an important role in
+this transformation, as it advocated both for the emancipation of
+Indian womanhood empowered by education. In this context, the good
+women, the chaste wife, and the mother became the iconic
+representation of the nation.<a class="sdendnoteanc" name="sdendnote54anc" href="#sdendnote54sym"><SUP>54</SUP></A>
+Formal education became not only acceptable, but, in fact requirement
+for the new respectable woman to acquire virtues of personal freedom.
+It was in this understanding of self-help and personal empowerment,
+that women increasingly entered the public gaze as workers,
+consumers, and students in the 1930s. As Debrashree Mukherjee
+explained in “Good Girls, Bad Girls”, there was a new breed of
+public women ranging from public workers to telephone operators,
+novelists to political activists.<a class="sdendnoteanc" name="sdendnote55anc" href="#sdendnote55sym"><SUP>55</SUP></A>
+ </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">In
+the earlier days of Indian cinema, no “decent” Indian woman would
+think of acting in a film. In fact, not even prostitutes would deign
+to appear on screen and </font><font face="Times New Roman, serif">Phalke,
+not able to find anyone to perform for his films, would rely on
+female impersonators.<a class="sdendnoteanc" name="sdendnote56anc" href="#sdendnote56sym"><SUP>56</SUP></A>
+Negative attitudes toward women as professional actors remained
+disapproving for decades after. As the 1928 </font><font face="Times New Roman, serif"><I>Report
+of the Indian Cinematograph Committee </I></font><font face="Times New Roman, serif">observed,
+actresses in the late 1920s were “mainly recruited from the
+“dancing girl” class.” The report continued that “Indian
+women of the better class do not take up film-acting as a
+profession.”<a class="sdendnoteanc" name="sdendnote57anc" href="#sdendnote57sym"><SUP>57</SUP></A></font></p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">Yet,
+the social context of an enormous influx of women into the public
+gaze in the 1930s made sexual reform in the film industry inevitable.
+In contrast to the low-class status aligned with public performance,
+a certain type of “acceptable female star”, merging from the
+educated upper classes was deemed acceptable.<a class="sdendnoteanc" name="sdendnote58anc" href="#sdendnote58sym"><SUP>58</SUP></A>
+Devika Rani, as an educated, respectable, upper-class Brahmin woman
+embodied the Nationalist gender ideal to perfection. She was the
+grandniece of the poet Tagore, had studied at the Royal Academy of
+Dramatic Art in London and even worked on set with Marlene Dietrich.
+Her ancestry and impressive education not only validated her own film
+work, but rather asserted respectability to the entire industry. </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">As
+Devika Rani emerged as a respectable female actress in the early
+1930s, she would often be called “queen of Indian cinema.”<a class="sdendnoteanc" name="sdendnote59anc" href="#sdendnote59sym"><SUP>59</SUP></A>
+One of her most important roles was her critical Bombay Talkies debut
+film </font><font face="Times New Roman, serif"><I>Achhut Kanya</I></font><font face="Times New Roman, serif">,
+in which Rani was highly applauded for her selfless portrayal of a
+dalit girl. A classic beauty, in </font><font face="Times New Roman, serif"><I>Achhut
+Kanya</I></font><font face="Times New Roman, serif">, even in the
+role of a dalit girl, she is coded as high-caste and female virtue.
+In fact, her status and ideal womanhood are so important that her
+real persona becomes indistinguishable from the roles she played in
+her films. At not time does she fall into the understanding of the
+“common woman”, who is understood as devoid of superior moral
+sense.<a class="sdendnoteanc" name="sdendnote60anc" href="#sdendnote60sym"><SUP>60</SUP></A>
+At the same time, she is never portrayed as sexual or a sex object on
+screen. On-screen sexuality was perceived as vulgar, courtship
+depicted in classical ways with the hero and heroine averting gazes
+or touching and embracing restricted to playful and tragic or tense
+situations. Thus, she was accepted by the nationalist male and
+educated elite. </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">While
+Devika Rani portrayed the ideas of respectable womanhood in the
+discourse of Nationalism, Nadia brought forward an alternative
+prototype outside this gender norm. In the role of “Fearless
+Nadia”, she served as a metaphor for emancipation, technological
+advancement, and modernity. As a blonde, big-boned stunt-woman who
+beat up evil men, swung from chandeliers, rode on top of speeding
+trains, and fought lions, Nadia sidestepped the alternatives of the
+“whore” and the respectable woman presented in colonial India.<a class="sdendnoteanc" name="sdendnote61anc" href="#sdendnote61sym"><SUP>61</SUP></A>
+As Firoze Rangoonwalla has described Nadia, she was a figure deeply
+committed to overthrowing the oppressive male-dominated order. In
+effect, this made Nadia to one of the “first feminist icons of
+Hindi cinema.”<a class="sdendnoteanc" name="sdendnote62anc" href="#sdendnote62sym"><SUP>62</SUP></A>
+Unmarried on- and off-screen, Nadia projected an image of
+independence contrary to the Nationalist ideal of womanhood. </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">At
+first, it seems paradoxical that Nadia emerged as the Indian queen of
+the box office. She was blonde, white, and spoke Hindi poorly. Still,
+she was easily accepted as an Indian heroine by audiences. In fact,
+as Prakash argues in </font><font face="Times New Roman, serif"><I>Mumbai
+Fables</I></font><font face="Times New Roman, serif">, her whiteness
+was an asset, because it meant that she could be “shown scantily
+dressed and seen acting in nontraditional ways.”<a class="sdendnoteanc" name="sdendnote63anc" href="#sdendnote63sym"><SUP>63</SUP></A>
+As such, when women began to act in films by the 1920s, many were
+from an Anlgo-Indian background.<a class="sdendnoteanc" name="sdendnote64anc" href="#sdendnote64sym"><SUP>64</SUP></A>
+Due to their hybrid ethnic and cultural heritage, Anglo-Indians were
+seen as outside “normal society” and thus less bound to social
+conventions of respectability.<a class="sdendnoteanc" name="sdendnote65anc" href="#sdendnote65sym"><SUP>65</SUP></A>
+Nadia’s emancipation goes hand in hand with her portrayal of
+technological advancement and modernity. In her essay “Not Quite
+(Pearl) White”, Rosie Thomas describes Nadia as a “thoroughly
+post-modern wonderwoman ... an ebullient </font><font face="Times New Roman, serif"><I>virangana</I></font><font face="Times New Roman, serif">
+in a modern world”, who is “empowered rather than crushed by
+technology.”<a class="sdendnoteanc" name="sdendnote66anc" href="#sdendnote66sym"><SUP>66</SUP></A>
+Being introduced in </font><font face="Times New Roman, serif"><I>Hunterwali
+</I></font><font face="Times New Roman, serif">as the “protector of
+the poor and punisher of the evildoers”, Nadia serves as the Indian
+mythological warrior queen “virangana.” Historically, the
+virangana is of extraordinary moral and physical strength as well as
+restores order and justice.<a class="sdendnoteanc" name="sdendnote67anc" href="#sdendnote67sym"><SUP>67</SUP></A>
+Despite her sexual and erotic appeal, however, Nadia was never
+portrayed as a vamp. Within the moral conventions of the virangana,
+Nadia was coded as a “good girl”. Furthermore, Nadia signified
+modernity and technological advances. Whether she was driving a car
+or riding on the roof a hurtling train, Nadia would, entirely
+autonomous, master the thrills of industrial modernity.  </font>
+                    </p>
+
+                    <br/>
+                    <h5 id="section_six">Cinema spaces</h5>
+                    <br>
+
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">The
+power of film in the 1930s was inherent to the medium: It could reach
+a vast audience. With the introduction of sound, its viewership
+increased significantly. This is evident in the theatrical success of
+both Bombay Talkie’s </font><font face="Times New Roman, serif"><I>Achhut
+Kanya </I></font><font face="Times New Roman, serif">as well as Wadia
+Movietone’s </font><font face="Times New Roman, serif"><I>Hunterwali.
+</I></font><font face="Times New Roman, serif">A 1936 Times of India
+article shows that </font><font face="Times New Roman, serif"><I>Achhut
+Kanya</I></font><font face="Times New Roman, serif"> was exhibited at
+the Roxy cinema in Bombay for more than twelve consecutive weeks,
+where “thousands have seen it, hundreds several times.” Already
+after running for only eight weeks, </font><font face="Times New Roman, serif"><I>Achhut
+Kanya </I></font><font face="Times New Roman, serif">had attracted
+more than a “lakh of persons” (hundred thousand). </font><font face="Times New Roman, serif"><I>Hunterwali
+</I></font><font face="Times New Roman, serif">was an even larger
+box-office sensation: It played to packed houses for more than 25
+weeks. Though it never became a critical success, that film was the
+major moneymaker of 1935</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote68anc" href="#sdendnote68sym"><SUP>68</SUP></A>
+</font><font face="Times New Roman, serif">As the writer K.A Abbas
+asserts, “The Indian film was the one form of popular literature
+that came closest to the vast masses of the people</font><font face="Times New Roman, serif">.”<a class="sdendnoteanc" name="sdendnote69anc" href="#sdendnote69sym"><SUP>69</SUP></A></font></p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">Amid
+Bombay’s socio-cultural transformation of the 1930s, as women
+increasingly entered the public sphere, through university
+co-education, political and social activities, urban public spaces
+facilitated encounters between the sexes that were hitherto uncommon.
+The cinema represented one of the more influential of these spaces;
+indeed, by recalibrating how men and women spent their leisure time,
+cinema attendance had a significant social impact. As the visual
+media theorist Giuliana Bruno has argued, the space of the cinema is
+a kind of democratic institution with larger social influence.<a class="sdendnoteanc" name="sdendnote70anc" href="#sdendnote70sym"><SUP>70</SUP></A></font><font face="Times New Roman, serif">
+As she explains, it is a public place of “social mixing”, a term
+defined by Kracauer. </font><font face="Times New Roman, serif">Within
+the colonial Indian experience, as Bruno argues, cinema empowered
+women in particular by providing mobility and thereby bolstering
+their public presence</font><font face="Times New Roman, serif">. </font><font face="Times New Roman, serif">As
+Shah exhibits in </font><font face="Times New Roman, serif"><I>Indian
+Film, </I></font><font face="Times New Roman, serif">at the end of
+then turn of the century the two sexes generally took their leisure
+separately. By bringing men and women together, the cinema served the
+cause of gender equality and allowed for greater inter-sexual
+understanding</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote71anc" href="#sdendnote71sym"><SUP>71</SUP></A></font></p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">As
+leisure grew and notions of the public and private discourse changed,
+the movie-going demographic broadened: Bombay’s films now attracted
+a more heterogeneous audience, which included members of the upper,
+middle, as well as working classes. The already-formulated
+heterogeneous audience for the Parsi theatre contributed
+substantially to the heterogeneity of Bombay film audiences</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote72anc" href="#sdendnote72sym"><SUP>72</SUP></A>
+</font><font face="Times New Roman, serif">In the 1930s, the
+diversity of audiences only expanded. As a 1936 Times of India
+article declared, </font><font face="Times New Roman, serif"><I>Achhut
+Kanya</I></font><font face="Times New Roman, serif"> had enjoyed
+“extraordinary popularity with all classes of local filmgoers.”
+Another article added that </font><font face="Times New Roman, serif"><I>Achhut
+Kanya </I></font><font face="Times New Roman, serif">even attracted
+minorities, such as European, who did not, in general, attend Indian
+cinemas</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote73anc" href="#sdendnote73sym"><SUP>73</SUP></A>
+</font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">While
+Bombay cinema was appealing to a heterogeneous cosmopolitan audience,
+however, the film distribution system of Bombay was based on a
+hierarchical system of first-run, second-run, and even third-run
+cinemas. According to this system, films were first released in more
+expensive, first-run cinemas. Then, depending on popularity they
+eventually made their way to suburban and mill-area halls. Thus, the
+more expensive halls saw films first and the cheaper </font><font face="Times New Roman, serif">ones
+later.<a class="sdendnoteanc" name="sdendnote74anc" href="#sdendnote74sym"><SUP>74</SUP></A>
+</font><font face="Times New Roman, serif">The effect was that as
+much as theaters gave all Indians a shared experience, the theaters
+themselves often reinforced traditional social hierarchies. </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif"><I>Achhut
+Kanya</I></font><font face="Times New Roman, serif">, which showcased
+at the Roxy cinema in Giragaum, tended to attract more middle to
+upper class audiences. This was partly due to the respectability and
+status Bombay Talkies and Devika Rani enjoyed. The film’s opening
+night was a “grand affair” and, testament to the film’s
+reputation, 1936 Congress President Pandit Jawaharlal Nehru went to
+see it.<a class="sdendnoteanc" name="sdendnote75anc" href="#sdendnote75sym"><SUP>75</SUP></A>
+</font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">There
+were also larger, structural reasons for the appeal to particular
+segments of society. Certainly, the location of its showcase
+influenced the demographic of </font><font face="Times New Roman, serif"><I>Achhut
+Kanya’</I></font><font face="Times New Roman, serif">s</font><font face="Times New Roman, serif"><I>
+</I></font><font face="Times New Roman, serif">audience. Located near
+the Royal Opera House in the historically middle-class neighborhood
+Girgaum, the Roxy cinema stood in what the historian R. K. Newman has
+explained, was a largely Brahmin area long favored by the old
+intellectual and professional classes, who moved from the city center
+because of the continuing influx of traders</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote76anc" href="#sdendnote76sym"><SUP>76</SUP></A>
+</font><font face="Times New Roman, serif">At the same time, Girgaum
+was home to chawls particularly built for the Marathi middle class,
+who had migrated to Bombay for education and white-collar jobs. In
+the 1930s, the neighborhood was known as a vital cultural center
+where educated lawyers, professors, and doctors made their homes.<a class="sdendnoteanc" name="sdendnote77anc" href="#sdendnote77sym"><SUP>77</SUP></A></font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">In this “respectable”
+neighborhood, the Roxy naturally it attracted more “respectable”
+– read: middle and upper class – audiences.</font></p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">It
+was not the location of the cinema alone that brought </font><font face="Times New Roman, serif"><I>Achhut
+Kanya</I></font><font face="Times New Roman, serif"> its middle and
+upper class audiences; the theater itself appealed to that
+viewership. Previously called the Wellington cinema, the Roxy was
+taken over and renovated by the Parsi distributor Kapurchand in 1934.
+It went on to become the premier first-run cinema for prestige
+productions in Bombay.<a class="sdendnoteanc" name="sdendnote78anc" href="#sdendnote78sym"><SUP>78</SUP></A></font><font face="Times New Roman, serif">
+</font><font face="Times New Roman, serif">The Roxy’s 1,014 seats
+were divided into lower-level seating areas and terrace-like
+balconies, which had exclusive and more expensive seats.<a class="sdendnoteanc" name="sdendnote79anc" href="#sdendnote79sym"><SUP>79</SUP></A>
+Even in the “democratic” space of the cinema, different publics
+negotiated relationships that reinscribed traditional social
+distinctions and power dynamics. </font><font face="Times New Roman, serif">The
+“glittering Roxy” was, thus, also a “place to be seen.”<a class="sdendnoteanc" name="sdendnote80anc" href="#sdendnote80sym"><SUP>80</SUP></A></font></p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">In
+contrast to</font><font face="Times New Roman, serif"><I> Achhut
+Kanya</I></font><font face="Times New Roman, serif">, </font><font face="Times New Roman, serif"><I>Hunterwali</I></font><font face="Times New Roman, serif">,
+premiered at the second-run Super cinema, which appealed more to
+middle and working classes. No distributor had come forward to buy
+it, as its storyline was seen as a risk. In fact, </font><font face="Times New Roman, serif"><I>Hunterwali
+</I></font><font face="Times New Roman, serif">was offered to Wadia
+Movietone’s distributor Kapurchand twice and both times he had
+turned it down. Determined to show their film, the Wadias had to
+finance the distribution themselves</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote81anc" href="#sdendnote81sym"><SUP>81</SUP></A></font><font face="Times New Roman, serif">The
+nature of </font><font face="Times New Roman, serif"><I>Hunterwali</I></font><font face="Times New Roman, serif">
+as a film appealed to middle and lower classes, while the upper
+classes, which generally considered the stunt film genre to be
+lowbrow entertainment, stayed mostly away. Yet, the demographic for
+that film, similar to </font><font face="Times New Roman, serif"><I>Achhut
+Kanya</I></font><font face="Times New Roman, serif"> and Roxy
+Theater, was also determined by where it made its premier: Super
+Cinema. </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">Super
+Cinema was located in a bustling locale, with a constant circulation
+of people. Thus, it attracted a diverse working and middle class
+audience. Built in the 1850s, Grant Road cut through central areas of
+Bombay and opened way to transport, industry, and building in the
+area</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote82anc" href="#sdendnote82sym"><SUP>82</SUP></A>
+</font><font face="Times New Roman, serif">It became locus for Bombay
+cinema precisely because it lay at the hub of all the main transport
+networks of the city and was conveniently close to tram junctions,
+such as Grant Road and Tardeo. Office workers, students, and
+shopkeepers who lived in the suburbs were important components of
+film audiences. They would pass cinema halls on their daily commute
+and, therefore, the location of the cinema made it possible for the
+theater itself to stand as advertisement for the films</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote83anc" href="#sdendnote83sym"><SUP>83</SUP></A></font><font face="Times New Roman, serif">
+Further, located on Grant Road, Super cinema was close to Lamington
+Road, which in the 1920 and 1930s was a cosmopolitan local for
+students and journalists and went on to house a number of cinema
+halls. So rich was the cinema culture of the area that many early
+film actors lived in this locality. The immediate surroundings of
+Super Cinema were that of a swinging and shining milieu of music,
+billiard rooms, and bars</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote84anc" href="#sdendnote84sym"><SUP>84</SUP></A></font></p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">While
+there was constant circulation and movement of people in the area
+surrounding Super Cinema, upper classes would avoid Grant Road. As a
+Royal Army Medical Corps official noted in 1921, “every subaltern
+and soldier in the British Army from Cape Wrath to Hong Kong knows of
+‘Grant Road’”, given that it was the “first place of
+interest” they went to see when visiting Bombay</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote85anc" href="#sdendnote85sym"><SUP>85</SUP></A></font><font face="Times New Roman, serif">
+Indeed, Grant Road itself was long known as Bombay’s prostitution
+hub. It is important to bear in mind that Grant Road also borders to
+various densely-packed residential and commercial neighborhoods, like
+Kamathipura, associated with lower classes and mill-workers.<a class="sdendnoteanc" name="sdendnote86anc" href="#sdendnote86sym"><SUP>86</SUP></A>
+With what the Census of 1931 noted was as many as 1,136 prostitutes,
+Kamathipura was known as the city’s red-light district</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote87anc" href="#sdendnote87sym"><SUP>87</SUP></A>
+</font><font face="Times New Roman, serif">The same laborers who
+frequented the area’s brothels made up a considerable portion of
+the audience for films like </font><font face="Times New Roman, serif"><I>Hunterwali,
+</I></font><font face="Times New Roman, serif">Thus, the local
+audience in their very nature discouraged potential upper class
+audiences from attending such films</font><font face="Times New Roman, serif">.
+</font>
+                    </p>
+
+                    <br/>
+                    <h5 id="section_seven">Conclusion</h5>
+                    <br>
+
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">The
+early sound period in Bombay cinema was, as Debrashree Mukherjee
+describes, “perhaps the most self-consciously utopian conjuncture
+in the history of Indian cinema</font><font face="Times New Roman, serif">.”<a class="sdendnoteanc" name="sdendnote88anc" href="#sdendnote88sym"><SUP>88</SUP></A>
+</font><font face="Times New Roman, serif">At their formation, both
+Bombay Talkies and Wadia Movietone and their “film families”
+stood at the crossroads of history. They pointed at a new direction
+for society—once with more enlightened social values. The Bombay
+film studios gave their workers a chance to imagine new selves and
+new ways of being in the world. In their mode of doing business,
+these studios shook up perceptions regarding labor, gender, and
+class. And their productions – evinced in films like </font><font face="Times New Roman, serif"><I>Achhut
+Kanya</I></font><font face="Times New Roman, serif"> and </font><font face="Times New Roman, serif"><I>Hunterwali</I></font><font face="Times New Roman, serif">
+– engendered and embodied the socio-cultural transformations of the
+time. Where the older studios in the 1920s relied on
+exhibition-driven enterprise, the newer sound studios inclined toward
+a more cosmopolitan ethos evident in their willingness to experiment
+with film production techniques and casting. Overall, it was in the
+city itself that Indians encountered and came to terms with new
+definitions of public and private existence – and it was within
+these new defined spaces that the population began to recognize the
+transformational potential of novel modes of association and
+intercourse. </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">Yet,
+what is referred to as the “sound studio era” was actually only a
+short chapter in the history of Indian cinema. </font><font face="Times New Roman, serif">With
+World War II and an intensification of the freedom struggle, the film
+industry began to feel an economic pinch, primarily in the supply of
+raw film, rationed to 11,000 feet for a final print. Hindi film
+output fell from 154 features in 1935 to seventy-three features in
+1945.<a class="sdendnoteanc" name="sdendnote89anc" href="#sdendnote89sym"><SUP>89</SUP></A>
+Further, the outbreak of WWII meant that the German technicians and
+directors, who represented a large segment of the Bombay Talkies’
+production force, were interned. That fact, along with the death of
+Himansu Rai in 1940, crippled the studio. Still, under the leadership
+of Devika Rani, Bombay Talkies managed to produce one of the biggest
+hits of the pre-independence era: </font><font face="Times New Roman, serif"><I>Kismet
+</I></font><font face="Times New Roman, serif">(1942)</font><font face="Times New Roman, serif"><I>.
+</I></font><font face="Times New Roman, serif">Meanwhile, by the end
+of the 1930s, as the stunt film genre began to lose favor with
+audiences, Wadia Movietone began experiencing heavy losses. Amidst an
+on-going conflict between principles J.B.H. and Homi Wadia, Wadia
+Movietone closed in 1941. Although Bombay Talkies survived until the
+1950s, the &quot;heyday of the studios&quot; was the 1930s. All in
+all, the studio system of the early 1930s embodied an idealism that
+was lost once the one-big-family studio system was swept away in the
+post-war era. </font>
+                    </p>
+                    <p style="text-indent: 0.5in; margin-bottom: 0in"><font face="Times New Roman, serif">Indian
+cinema has come a long way since the glory days of Bombay Talkies and
+Wadia Movietone. By 1981, India had produced more than 15,000 feature
+films and almost as many have been produced since</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote90anc" href="#sdendnote90sym"><SUP>90</SUP></A>
+</font><font face="Times New Roman, serif">Today’s post-colonial
+Mumbai is India’s entertainment capital par excellence: Home to
+Bollywood, it attracts the largest, most diverse audience worldwide
+with nearly 2.7 billion tickets sold yearly</font><font face="Times New Roman, serif">.<a class="sdendnoteanc" name="sdendnote91anc" href="#sdendnote91sym"><SUP>91</SUP></A>
+</font><font face="Times New Roman, serif">Yet, one can argue that
+the overwhelming success of the industry lies in the very same
+foundations that allowed for the talkie to excel in Bombay’s
+colonial era. Just as the Parsi theater allowed for the sound studios
+of Bombay to flourish, the sound studio laid the structural
+foundations for the post-independence era. </font>
+                    </p>
+
+                    <br/>
+                    <h5 id="section_eight">Bibliography</h5>
+                    <br>
+
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif"><B>Official
+Records Pertaining to Cinema </B></font>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif">Census
+of India. (1931)</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">India. (1928). </font><font face="Times New Roman, serif"><I>Report
+of the Indian Cinematograph Committee: 1927-1928, Evidence.</I></font><font face="Times New Roman, serif">
+Calcutta: Govt. of India Central Publication Branch.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif"><B>Books
+and Articles </B></font>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif">Adarkar,
+N. (2011). </font><font face="Times New Roman, serif"><I>The chawls
+of Mumbai: Galleries of life.</I></font><font face="Times New Roman, serif">
+Gurgaon: ImprintOne.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Banerjee, S., and Srivastava, A.
+(1988). </font><font face="Times New Roman, serif"><I>One Hundred
+Indian Feature Films: An annotated Filmography</I></font><font face="Times New Roman, serif">.
+New York: Garland.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Barnouw, E., and Krishnaswamy, S.
+(1963). </font><font face="Times New Roman, serif"><I>Indian Film.</I></font><font face="Times New Roman, serif">
+New York: Columbia University Press.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in">
+                        <font color="#1a1a1a"><font face="Times New Roman, serif">Bhattacharya,
+S. (1981). Capital and Labour in Bombay City, 1928-29. </font></font><font color="#1a1a1a"><font face="Times New Roman, serif"><I>Economic
+and Political Weekly,</I></font></font><font color="#1a1a1a"><font face="Times New Roman, serif">
+</font></font><font color="#1a1a1a"><font face="Times New Roman, serif"><I>16
+</I></font></font><font color="#1a1a1a"><font face="Times New Roman, serif">(42/43),
+36-44. Retrieved from http://www.jstor.org/stable/4370362</font></font>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Bhaumik, K. (2001). </font><font face="Times New Roman, serif">The
+Emergence of the Bombay Film Industry, 1913-1936</font><font face="Times New Roman, serif">,
+Unpublished D. Phil Thesis. Oxford. </font>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">--. (January 01, 2011).
+Cinematograph to Cinema. Bioscope: South Asian Screen Studies, 2, 1,
+41-67. </font>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in; widows: 0; orphans: 0">
+                        <font color="#1a1a1a"><font face="Times New Roman, serif">Chatterjee,
+P. (1989). Colonialism, Nationalism, and Colonialized Women: The
+Contest in India. </font></font><font color="#1a1a1a"><font face="Times New Roman, serif"><I>American
+Ethnologist,</I></font></font><font color="#1a1a1a"><font face="Times New Roman, serif">
+</font></font><font color="#1a1a1a"><font face="Times New Roman, serif"><I>16</I></font></font><font color="#1a1a1a"><font face="Times New Roman, serif">(4),
+622-633. </font></font>
+                    </p>
+                    <p style="margin-bottom: 0in; widows: 0; orphans: 0">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif"><I>Cinema
+vision India.</I></font><font face="Times New Roman, serif"> (1980).
+Bombay: S. Kak.</font></p>
+                    <p style="margin-bottom: 0in; widows: 0; orphans: 0">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in; widows: 0; orphans: 0">
+                        <font face="Times New Roman, serif">Dharap, B. V. (1973). </font><font face="Times New Roman, serif"><I>Indian
+films 1972.</I></font><font face="Times New Roman, serif"> Poona,
+Bombay: B.V. Dharap Motion Picture Enterprises.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Dwivedi, S., Mehrotra, R., and
+Mulla-Feroze, U. (1995). </font><font face="Times New Roman, serif"><I>Bombay:
+The cities within.</I></font><font face="Times New Roman, serif">
+Bombay: India Book House.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif">Ganti,
+T. (2004). </font><font face="Times New Roman, serif"><I>Bollywood: A
+Guidebook to Popular Hindi Cinema</I></font><font face="Times New Roman, serif">.
+New York: Routledge. </font>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Gulazāra, G.N., Nihalani, G.,
+and Chatterjee, S. (2003). </font><font face="Times New Roman, serif"><I>Encyclopaedia
+of Hindi Cinema.</I></font><font face="Times New Roman, serif"> New
+Delhi: Encyclopaedia Britannica (India). </font>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Hansen, K. (1992). </font><font face="Times New Roman, serif"><I>Grounds
+for play: The Nauṭaṅkī theatre of North India</I></font><font face="Times New Roman, serif">.
+Berkeley: University of California Press.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Kidambi, P. (2007). </font><font face="Times New Roman, serif"><I>The
+making of an Indian metropolis: Colonial governance and public
+culture in Bombay, 1890-1920.</I></font><font face="Times New Roman, serif">
+Aldershot, England: Ashgate.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif">Mishra,
+V. (2002). </font><font face="Times New Roman, serif"><I>Bollywood
+cinema: Temples of desire.</I></font><font face="Times New Roman, serif">
+New York: Routledge.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Majumdar, N. (2009). </font><font face="Times New Roman, serif"><I>Wanted
+Cultured Ladies Only!: Female Stardom and Cinema in India,
+1930s-1950s.</I></font><font face="Times New Roman, serif">
+University of Illinois Press.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0.17in; line-height: 0.21in; widows: 0; orphans: 0">
+                        <font face="Times New Roman, serif">Mukherjee, D. </font><font face="Times New Roman, serif">(2016).
+Tracking Utopias: Technology, labour and secularism in Bombay cinema
+(1930s-1940s). In Rajagopal, A., and Rao, A. (2016</font><font face="Times New Roman, serif"><I>).
+Media and utopia: History, imagination and technology. </I></font><font face="Times New Roman, serif">(pp.
+81-102). London: Routledge, Taylor &amp; Francis Group.</font></p>
+                    <p style="margin-bottom: 0.17in; line-height: 0.21in; widows: 0; orphans: 0">
+                        <font face="Times New Roman, serif">--. </font><font face="Times New Roman, serif">(2009).
+Good girls, bad girls. </font><font face="Times, serif"><I>Seminar,
+</I></font><font face="Times New Roman, serif">598, June. </font>
+                    </p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0.17in; line-height: 0.21in; widows: 0; orphans: 0">
+                        <font face="Times New Roman, serif">Newman, R. K. (1981). </font><font face="Times New Roman, serif"><I>Workers
+and unions in Bombay, 1918-1929: A study of organisation in the
+cotton mills</I></font><font face="Times New Roman, serif">.
+Canberra: South Asian History Section, Australian National
+University.</font></p>
+                    <p style="margin-left: 0.44in; text-indent: -0.44in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Oommen, M. A., and Joseph, K. V.
+(1991). </font><font face="Times New Roman, serif"><I>Economics of
+Indian Cinema.</I></font><font face="Times New Roman, serif"> New
+Delhi: Oxford &amp; IBH Pub. Co.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif">Prakash,
+G. (2010). </font><font face="Times New Roman, serif"><I>Mumbai
+Fables.</I></font><font face="Times New Roman, serif"> Princeton:
+Princeton University Press.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Rajadhyaksha, A., Willemen, P.,
+British Film Institute., and National Film Archive of India. (1999).</font><font face="Times New Roman, serif"><I>
+Encyclopaedia of Indian Cinema</I></font><font face="Times New Roman, serif">.
+London: British Film Institute.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Ramachandran, T. M., and Rukmini,
+S. (1985). </font><font face="Times New Roman, serif"><I>70 years of
+Indian cinema, 1913-1983.</I></font><font face="Times New Roman, serif">
+Bombay: CINEMA India-International.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Ramachandran, T. M., Burra, R.,
+Chandran, M., and Indian Academy of Motion Picture Arts &amp;
+Sciences. (1981). </font><font face="Times New Roman, serif"><I>Fifty
+Years of Indian Talkies, 1931-1981: A Commemorative Volume. </I></font><font face="Times New Roman, serif">Bombay:
+Indian Academy of Motion Picture Arts &amp; Sciences.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Rangoonwalla, F. (2003). The
+Emergence of Talkies, 1931-1946. In </font><font color="#262626"><font face="Times New Roman, serif"><I>Encyclopedia
+of Hindi Cinema. </I></font></font><font color="#262626"><font face="Times New Roman, serif">(pp.
+43-60). </font></font><font face="Times New Roman, serif">Bombay:
+Indian Academy of Motion Picture Arts &amp; Sciences.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif">Rao,
+A. (2005). </font><font face="Times New Roman, serif"><I>Gender &amp;
+caste.</I></font><font face="Times New Roman, serif"> London: Zed
+Books.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif">Shah,
+P. (1981). </font><font face="Times New Roman, serif"><I>The Indian
+Film.</I></font><font face="Times New Roman, serif"> Westport, Conn:
+Greenwood P.</font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.56in; text-indent: -0.56in; margin-bottom: 0in">
+                        <font color="#000000"><font face="Times New Roman, serif">Tambe, A.
+(2009). </font></font><font color="#000000"><font face="Times New Roman, serif"><I>Codes
+of Misconduct: Regulating Prostitution in Late Colonial Bombay.
+</I></font></font><font color="#000000"><font face="Times New Roman, serif">Minneapolis,
+US: University of Minnesota Press. </font></font>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-left: 0.63in; text-indent: -0.63in; margin-bottom: 0in">
+                        <font face="Times New Roman, serif">Thomas, R. (2014). </font><font face="Times New Roman, serif"><I>Bombay
+before Bollywood: Film city fantasies. </I></font><font face="Times New Roman, serif">New
+Delhi: Orient Blackswan Private Limited. </font>
+                    </p>
+                    <p style="margin-left: 0.63in; text-indent: -0.63in; margin-top: 0.19in; margin-bottom: 0.19in">
+                        <font face="Times New Roman, serif">--. (2005). Not quite (pearl)
+white: Fearless Nadia, queen of the stunts. In Raminder Kaur and Ajay
+K. Sinha (Eds), <I>Bollyworld: Popular Indian cinema through a
+transnational lens </I>(London: SAGE. </font>
+                    </p>
+                    <p style="margin-left: 0.63in; text-indent: -0.63in; margin-bottom: 0.17in; line-height: 0.21in; widows: 0; orphans: 0">
+                        <font face="Times New Roman, serif">Vasudevan, S. R. (1995). Film
+Studies, New Cultural History and Experience of Modernity. </font><font face="Times New Roman, serif"><I>Economic
+and Political Weekly, 30,</I></font><font face="Times New Roman, serif">
+44, 2809-2814. </font>
+                    </p>
+                    <p style="margin-left: 0.63in; text-indent: -0.63in; margin-bottom: 0.17in; line-height: 0.21in; widows: 0; orphans: 0">
+                        <font face="Times New Roman, serif">Windover, M. (2012). </font><font face="Times New Roman, serif"><I>Art
+deco: A mode of mobility</I></font><font face="Times New Roman, serif">.
+Québec: Presses de l'Université du Québec.</font></p>
+                    <p style="margin-left: 0.63in; text-indent: -0.63in; margin-bottom: 0.17in; line-height: 0.21in; widows: 0; orphans: 0">
+                        <font face="Times New Roman, serif">Wenner, D., &amp; Morrison, R.
+(2005). </font><font face="Times New Roman, serif"><I>Fearless Nadia:
+The true story of Bollywood's original stunt queen.</I></font><font face="Times New Roman, serif">
+New Delhi: Penguin Books.</font></p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif"><B>Newspaper
+Articles: </B></font>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0.17in; widows: 0; orphans: 0"><font color="#000000"><font face="Times New Roman, serif">&quot;Achhut
+kannya&quot; in eighth week at Roxy. (1936, September 4). </font></font><font color="#000000"><font face="Times New Roman, serif"><I>The
+Times of India (1861-Current)</I></font></font><font color="#000000"><font face="Times New Roman, serif">
+Retrieved from
+</font></font>
+                        <A href="http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/346133295?accountid=10226"><font face="Times New Roman, serif">http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/346133295?accountid=10226</font></A>
+                    </p>
+                    <p style="margin-bottom: 0.17in; widows: 0; orphans: 0"><font color="#000000"><font face="Times New Roman, serif">BOMBAY
+TALKIES' &quot;ACHHUT KANNYA&quot; NEARING END OF RECORD RUN. (1936,
+October 2). </font></font><font color="#000000"><font face="Times New Roman, serif"><I>The
+Times of India (1861-Current)</I></font></font><font color="#000000"><font face="Times New Roman, serif">
+Retrieved from
+</font></font><font face="Times New Roman, serif"><A href="http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/613833017?accountid=10226">http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/613833017?accountid=10226</A>
+</font>
+                    </p>
+                    <p style="margin-bottom: 0in"><font face="Times New Roman, serif">McCarthy,
+N. (2014, September 3). India’s Film Industry By The Numbers.
+</font><font face="Times New Roman, serif"><I>Forbes Magazine.
+</I></font><font face="Times New Roman, serif">Retrieved from:
+<A href="http://www.forbes.com/sites/niallmccarthy/2014/09/03/bollywood-indias-film-industry-by-the-numbers-infographic/#22422b5c7bf0">http://www.forbes.com/sites/niallmccarthy/2014/09/03/bollywood-indias-film-industry-by-the-numbers-infographic/#22422b5c7bf0</A></font></p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font color="#000000"><font face="Times New Roman, serif">THE
+BOMBAY TALKIES; LIMITED. (1934, August 9). </font></font><font color="#000000"><font face="Times New Roman, serif"><I>The
+Times of India (1861-Current). </I></font></font><font color="#000000"><font face="Times New Roman, serif">Retrieved
+from:
+</font></font>
+                        <A href="http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/324678213?accountid=10226"><font face="Times New Roman, serif">http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/324678213?accountid=10226</font></A>
+                    </p>
+                    <p style="margin-bottom: 0in">
+                        <BR>
+                    </p>
+                    <p style="margin-bottom: 0in"><font color="#000000"><font face="Times New Roman, serif">Vijayakar,
+R. M. (2005, June 10). Mumbai's roxy set to reopen.</font></font><font color="#000000"><font face="Times New Roman, serif"><I>
+India – West</I></font></font><font color="#000000"><font face="Times New Roman, serif">.
+</font></font>
+                    </p>
+                    <p style="margin-bottom: 0in"><font color="#000000"><font face="Times New Roman, serif">Retrieved
+from
+</font></font>
+                        <A href="http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/365347015?accountid=10226"><font face="Times New Roman, serif">http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/365347015?accountid=10226</font></A>
+                    </p>
+                    </font>
+                    </font>
+                    <A href="http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/365347015?accountid=10226"><font face="Times New Roman, serif">http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com.ezproxy.cul.columbia.edu/docview/365347015?accountid=10226</font></A>
+                </p>
+
+                <br/>
+                <br/> Deniz Rosenberger
+                <br/>
+                <br/>
+
+            </div>
+            <!-- footnotes -->
+            <div class="col-md-3">
+                <div class="footnotes">
+
+                    <div class="footnote-ref footnote-ref-1">
+
+                        <div id="sdendnote1">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote1sym" href="#sdendnote1anc">1</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Bhaumik, K. (2001). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">The
+	Emergence of the Bombay Film Industry, 1913-1936</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">,
+	Unpublished D. Phil Thesis. Oxford, 7, 153. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote2">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote2sym" href="#sdendnote2anc">2</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Thomas,
+	R. (2014). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Bombay
+	before Bollywood: Film city fantasies. </I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">New
+	Delhi: Orient Blackswan Private Limited, 8. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote3">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote3sym" href="#sdendnote3anc">3</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Thomas, R. (2005). Not quite (pearl) white: Fearless Nadia, queen of
+	the stunts. In Raminder Kaur and Ajay K. Sinha (Eds), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Bollyworld:
+	Popular Indian cinema through a transnational lens </I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">(London:
+	SAGE.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote4">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote4sym" href="#sdendnote4anc">4</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></SUP><font size=2 style="font-size: 10pt">
+	</font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">India.
+	(1928). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Report
+	of the Indian Cinematograph Committee: 1927-1928, Evidence.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Calcutta: Govt. of India Central Publication Branch, 188. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote5">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote5sym" href="#sdendnote5anc">5</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Barnouw,
+	E., and Krishnaswamy, S. (1963). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Indian
+	Film.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	New York: Columbia University Press, 68. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote6">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote6sym" href="#sdendnote6anc">6</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	The Indian sound film, unlike any sound film on any other land, had
+	from its first moment seized exclusively musical drama forms. </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Alam
+	Ara </I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">had
+	dozens of songs and later talkie productions would have up to 40. By
+	incorporating music in the Indian films, they became not only a
+	successor to movie alone but also to the great Indian music drama
+	tradition. For more detail regarding music and Bombay cinema, see
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Gulazāra,
+	G.N., Nihalani, G., and Chatterjee, S. (2003). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Encyclopaedia
+	of Hindi Cinema.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	New Delhi: Encyclopaedia Britannica (India), 16.</font></font><font face="Times New Roman, serif">
+	</font>
+                            </p>
+                        </div>
+                        <div id="sdendnote7">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; widows: 0; orphans: 0; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote7sym" href="#sdendnote7anc">7</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Dharap,
+	B. V. (1973). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Indian
+	films 1972.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Poona, Bombay: B.V. Dharap Motion Picture Enterprises, Preface. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote8">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote8sym" href="#sdendnote8anc">8</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Rangoonwalla, F. (2003). The Emergence of Talkies, 1931-1946. In
+	</font></font><font color="#262626"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Encyclopedia
+	of Hindi Cinema. </I></font></font>
+                                </font><font color="#262626"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">(pp.
+	43-60). </font></font>
+                                </font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Bombay:
+	Indian Academy of Motion Picture Arts &amp; Sciences, 43. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote9">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote9sym" href="#sdendnote9anc">9</a><sup><font face="Times New Roman, serif"></font></SUP><font face="Times New Roman, serif">
+	</font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Nadia
+	was born Mary Evans. In her years as touring professional dancer,
+	she changed her name to the more ‘exotic’ Nadia. The name was
+	suggested by an Armenian fortune teller, who had foretold that a
+	successful career would lay ahead of her, only if she changed her
+	name to one starting with the letter “N”. See Thomas, R. (2005),
+	43. </font></font>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footnote-ref footnote-ref-2">
+
+                        <div id="sdendnote10">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote10sym" href="#sdendnote10anc">10</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Mukherjee, Debashree. </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">(2016).
+	Tracking Utopias: Technology, labour and secularism in Bombay cinema
+	(1930s-1940s), 86. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote11">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote11sym" href="#sdendnote11anc">11</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Census
+	of India, </I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">1931,
+	v. IX, 38, 17-8. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote12">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote12sym" href="#sdendnote12anc">12</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Bhaumik. (2001), 138-9. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote13">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote13sym" href="#sdendnote13anc">13</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Kidambi,
+	P. (2007). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	making of an Indian metropolis: Colonial governance and public
+	culture in Bombay, 1890-1920.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Aldershot, England: Ashgate, 17. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote14">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote14sym" href="#sdendnote14anc">14</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Dwivedi,
+	S., Mehrotra, R., and Mulla-Feroze, U. (1995). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Bombay:
+	The cities within.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Bombay: India Book House, 63. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote15">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote15sym" href="#sdendnote15anc">15</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	For example, Parsi mercantile capital substantially founded Madan
+	Theatres, Bombay’s most important early film distribution
+	infrastructure. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote16">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote16sym" href="#sdendnote16anc">16</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Rajadhyaksha,
+	A., Willemen, P., British Film Institute., and National Film Archive
+	of India. (1999).</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>
+	Encyclopaedia of Indian Cinema</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">.
+	London: British Film Institute.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote17">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote17sym" href="#sdendnote17anc">17</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	With shipping still in his blood, J.B.H Wadia wrote in an
+	autobiographical essay that he used to advertise his films as “a
+	cargo load of rich variety brought into port by the Wadia ship.”
+	See “Those Were The Days” in </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Ramachandran,
+	T. M., Burra, R., Chandran, M., and Indian Academy of Motion Picture
+	Arts &amp; Sciences. (1981). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Fifty
+	Years of Indian Talkies, 1931-1981: A Commemorative Volume. </I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Bombay:
+	Indian Academy of Motion Picture Arts &amp; Sciences.</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	 </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote18">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote18sym" href="#sdendnote18anc">18</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	As Bombay Talkie’s articles of incorporation show, F.E. Dinshaw,
+	P. Sethna, and C. Jehangir, were some of the dozen individuals on
+	the board of Bombay Talkies. See: </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">THE
+	BOMBAY TALKIES; LIMITED. (1934, August 9). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	Times of India (1861-Current). </I></font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote19">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote19sym" href="#sdendnote19anc">19</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Ganti,
+	T. (2004). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Bollywood:
+	A Guidebook to Popular Hindi Cinema</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">.
+	New York: Routledge, 17, 106. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote20">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote20sym" href="#sdendnote20anc">20</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Bhaumik. (2001), 116, 182-3. </font></font>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footnote-ref footnote-ref-3">
+                        <div id="sdendnote21">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote21sym" href="#sdendnote21anc">21</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Census
+	of India</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	(1931), 38, v. IX, 51. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote22">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote22sym" href="#sdendnote22anc">22</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Prakash,
+	G. (2010). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Mumbai
+	Fables.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Princeton: Princeton University Press, 119. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote23">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote23sym" href="#sdendnote23anc">23</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	See Barnouw </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">(1963)</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">,
+	120. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote24">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote24sym" href="#sdendnote24anc">24</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Bhattacharya,
+	S. (1981). Capital and Labour in Bombay City, 1928-29. </font></font>
+                                </font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Economic
+	and Political Weekly,</I></font></font>
+                                </font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font>
+                                </font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>16
+	</I></font></font>
+                                </font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">(42/43),
+	36-44. </font></font>
+                                </font>
+                            </p>
+                        </div>
+                        <div id="sdendnote25">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote25sym" href="#sdendnote25anc">25</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Prakash,
+	G. (2010). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">210,
+	141.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote26">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote26sym" href="#sdendnote26anc">26</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Oommen,
+	M. A., and Joseph, K. V. (1991). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Economics
+	of Indian Cinema.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	New Delhi: Oxford &amp; IBH Pub. Co., 11. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote27">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote27sym" href="#sdendnote27anc">27</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Ramachandran,
+	T. M., (1985), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">91.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote28">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote28sym" href="#sdendnote28anc">28</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Barnouw (1963), 102-3. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote29">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote29sym" href="#sdendnote29anc">29</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Kidambi,
+	P. (2007)</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">,
+	9. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote30">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; widows: 0; orphans: 0; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote30sym" href="#sdendnote30anc">30</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	Light of Asia </I></font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">was
+	shown in London for a record-breaking non-stop run of nine months
+	and even seen by the Kind and Queen of England – at the time also
+	the Emperor and Empress of India. In</font></font>
+                                </font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Ramachandran, T. M., and Rukmini, S. (1985).</font></font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font>
+                                </font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>70
+	years of Indian Cinema</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">,
+	86.</font></font><font face="Times New Roman, serif"> </font>
+                            </p>
+                        </div>
+                        <div id="sdendnote31">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote31sym" href="#sdendnote31anc">31</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Interview with Devika Rani Roerich, in Barnouw (1963), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Indian
+	Film, </I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">98.
+	</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote32">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote32sym" href="#sdendnote32anc">32</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	While J.B.H. Wadia was active politically, his younger brother Homi
+	was less interested in a socio-political agenda. As Rosie Thomas
+	explains in </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Bombay
+	before Bollywood: Film City Fantasies</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">,
+	Homi had a “populist box-office flair”, was action-oriented, and
+	emphasize stunts. When J.B.H. Wadia insisted on privileging social
+	themes in the production programme, Homi left to create his own
+	studio Basant Pictures. See Thomas, </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">R.
+	(2014), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">131.
+	</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote33">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote33sym" href="#sdendnote33anc">33</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	“Those Were The Days” in </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Fifty
+	Years of Indian Talkies, 1931-1981</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">,
+	110-12.  </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote34">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote34sym" href="#sdendnote34anc">34</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	To name a few of these names: The famous actor Ashok Kumar started
+	at Bombay Talkies as a laboratory assistant. The equally famous Raj
+	Kapoor began as a clapper boy. Producer S. Mukherjee and writer K.A.
+	Abbas were also trained at Bombay Talkies. </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Indian
+	Film</I></font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote35">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote35sym" href="#sdendnote35anc">35</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Ramachandran,
+	T. M., (1985), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">91.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote36">
+                            <p style="margin-bottom: 0in; widows: 0; orphans: 0; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote36sym" href="#sdendnote36anc">36</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Thomas,
+	R. (2014). </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote37">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote37sym" href="#sdendnote37anc">37</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Thomas,
+	R. (2014), 97. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote38">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote38sym" href="#sdendnote38anc">38</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	For example, Bombay Talkies employed the Parsi the famous Muslim
+	screenwriter Hasan Manto as well as the German technicians, such as
+	the director Franz Osten and the set designer Carl von Spreti.  </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote39">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote39sym" href="#sdendnote39anc">39</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Shah,
+	P. (1981). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	Indian Film.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Westport, Conn: Greenwood P.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote40">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote40sym" href="#sdendnote40anc">40</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Barnouw, (1963), 100. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote41">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote41sym" href="#sdendnote41anc">41</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Oommen,
+	M. A., and Joseph, K. V. (1991). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Economics
+	of Indian Cinema.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	New Delhi: Oxford &amp; IBH Pub. Co.,</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote42">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote42sym" href="#sdendnote42anc">42</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Barnouw (1963), 119. </font></font>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footnote-ref footnote-ref-4">
+                        <div id="sdendnote43">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote43sym" href="#sdendnote43anc">43</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Kidambi,
+	P. (2007), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">233.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote44">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote44sym" href="#sdendnote44anc">44</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Bhaumik. (2001), 142.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote45">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote45sym" href="#sdendnote45anc">45</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	For detailed annotations of </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Achhut
+	Kanya</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">,
+	see <A href="https://indiancine.ma/grid/year/achhut_kanya">https://indiancine.ma/grid/year/achhut_kanya</A>.
+	</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote46">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote46sym" href="#sdendnote46anc">46</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Rajadhyaksha,
+	A., (1999).</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote47">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote47sym" href="#sdendnote47anc">47</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Kidambi,
+	P. (2007), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">205-6.
+	</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote48">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote48sym" href="#sdendnote48anc">48</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Rao,
+	A. (2005). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Gender
+	&amp; caste.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	London: Zed Books,</font></font><font face="Times New Roman, serif">
+	</font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Introduction.
+	</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote49">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote49sym" href="#sdendnote49anc">49</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Ramachandran,
+	T. M.,(1981). </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote50">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote50sym" href="#sdendnote50anc">50</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Thomas, R. (2014), 121. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote51">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote51sym" href="#sdendnote51anc">51</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Majumdar,
+	N. (2009). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Wanted
+	Cultured Ladies Only!: Female Stardom and Cinema in India, </I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">59.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote52">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote52sym" href="#sdendnote52anc">52</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Thomas,
+	R. (2014), 100. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote53">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; widows: 0; orphans: 0; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote53sym" href="#sdendnote53anc">53</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Wenner,
+	D., &amp; Morrison, R. (2005). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Fearless
+	Nadia: The true story of Bollywood's original stunt queen.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	New Delhi: Penguin Books. </font></font><font color="#262626"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">IX,
+	XV. </font></font>
+                                </font>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footnote-ref footnote-ref-5">
+                        <div id="sdendnote54">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote54sym" href="#sdendnote54anc">54</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Chatterjee,
+	P. (1989), </font></font>
+                                </font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">627-9.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote55">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote55sym" href="#sdendnote55anc">55</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Mukherjee, D. (2009). Good girls, bad girls. </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Seminar,
+	</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">598,
+	June.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote56">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote56sym" href="#sdendnote56anc">56</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Barnouw, (1963), 13. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote57">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote57sym" href="#sdendnote57anc">57</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">India.
+	(1928). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Report
+	of the Indian Cinematograph Committee: 1927-1928, Evidence.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Calcutta: Govt. of India Central Publication Branch, 132. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote58">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote58sym" href="#sdendnote58anc">58</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Majumdar,
+	N. (2009), 59. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote59">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote59sym" href="#sdendnote59anc">59</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Mukherjee, D. (2009). </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote60">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; widows: 0; orphans: 0; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote60sym" href="#sdendnote60anc">60</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Chatterjee,
+	P. (1989). Colonialism, Nationalism, and Colonialized Women: The
+	Contest in India. </font></font>
+                                </font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>American
+	Ethnologist,</I></font></font>
+                                </font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font>
+                                </font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>16</I></font></font>
+                                </font><font color="#1a1a1a"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">(4),
+	</font></font>
+                                </font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">627.
+	</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote61">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote61sym" href="#sdendnote61anc">61</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Prakash,
+	G. (2010), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">110-11.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote62">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote62sym" href="#sdendnote62anc">62</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Rangoonwalla, F. (2003).</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote63">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote63sym" href="#sdendnote63anc">63</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Prakash,
+	G. (2010), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">110-11.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote64">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote64sym" href="#sdendnote64anc">64</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	The term “Anglo-Indians” refers to mixed Indian and British
+	ancestry, and Christian or Jewish backgrounds. In the discussion of
+	Nadia as an Anglo-Indian star, it interesting that her whiteness is
+	as anomaly compared to stars like Sulochana or Sabita Devi. Nadia
+	vehemently refused any Indianization efforts of the Wadia brothers,
+	such as changing her name or appearance. For further reading see
+	Wanted! Cultured Woman Only, Bombay before Bollywood: Film City
+	fantasies </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote65">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote65sym" href="#sdendnote65anc">65</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Ganti,
+	T. (2004), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">12.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote66">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote66sym" href="#sdendnote66anc">66</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Thomas,
+	R. (2014), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">111-12.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote67">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote67sym" href="#sdendnote67anc">67</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Hansen,
+	K. (1992). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Grounds
+	for play</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">,</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">189.</font></font>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footnote-ref footnote-ref-6">
+                        <div id="sdendnote68">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote68sym" href="#sdendnote68anc">68</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">&quot;Achhut
+	kannya&quot; in eighth week at Roxy. (1936, September 4). </font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	Times of India (1861-Current), </I></font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">BOMBAY
+	TALKIES' &quot;ACHHUT KANNYA&quot; NEARING END OF RECORD RUN. (1936,
+	October 2). </font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	Times of India (1861-Current).</I></font></font>
+                                </font>
+                            </p>
+                        </div>
+                        <div id="sdendnote69">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote69sym" href="#sdendnote69anc">69</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	“What the Talkies talked about” in </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Fifty
+	Years of Indian Talkies, 1931-1981</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">.
+	 </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote70">
+                            <p style="margin-bottom: 0in; widows: 0; orphans: 0; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote70sym" href="#sdendnote70anc">70</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Windover,
+	M. (2012). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Art
+	deco: A mode of mobility</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">.
+	Québec: Presses de l'Université du Québec.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote71">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote71sym" href="#sdendnote71anc">71</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Shah,
+	P. (1981). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	Indian Film.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Westport, Conn: Greenwood P.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote72">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote72sym" href="#sdendnote72anc">72</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Bhaumik. (2001), 71. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote73">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote73sym" href="#sdendnote73anc">73</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">&quot;Achhut
+	kannya&quot; in eighth week at Roxy. (1936, September 4). </font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	Times of India (1861-Current)</I></font></font>
+                                </font>
+                            </p>
+                        </div>
+                        <div id="sdendnote74">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote74sym" href="#sdendnote74anc">74</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Bhaumik. (2001), 28. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote75">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote75sym" href="#sdendnote75anc">75</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">BOMBAY
+	TALKIES' &quot;ACHHUT KANNYA&quot; NEARING END OF RECORD RUN. (1936,
+	October 2). </font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	Times of India (1861-Current)</I></font></font>
+                                </font>
+                            </p>
+                        </div>
+                        <div id="sdendnote76">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; widows: 0; orphans: 0; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote76sym" href="#sdendnote76anc">76</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Newman,
+	R. K. (1981). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Workers
+	and unions in Bombay, 1918-1929: A study of organisation in the
+	cotton mills</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">.
+	Canberra: South Asian History Section, Australian National
+	University, 19. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote77">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote77sym" href="#sdendnote77anc">77</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Adarkar,
+	N. (2011). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>The
+	chawls of Mumbai: Galleries of life.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Gurgaon: ImprintOne, 18-22.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote78">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote78sym" href="#sdendnote78anc">78</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Bhaumik,
+	K. (January 01, 2011). Cinematograph to Cinema. Bioscope: South
+	Asian Screen Studies, 2, 1, 41-67, 59. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote79">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote79sym" href="#sdendnote79anc">79</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Vijayakar,
+	R. M. (2005, June 10). Mumbai's roxy set to reopen.</font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>
+	India – West</I></font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">.</font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif">
+	</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote80">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote80sym" href="#sdendnote80anc">80</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	This effect would only exacerbate with the emergence of the Art Deco
+	theater in Bombay. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote81">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote81sym" href="#sdendnote81anc">81</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Cinema
+	vision India.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	(1980), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">85.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote82">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote82sym" href="#sdendnote82anc">82</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Dwivedi,
+	S., Mehrotra, R., and Mulla-Feroze, U. (1995). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Bombay:
+	The cities within.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Bombay: India Book House, 63.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote83">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote83sym" href="#sdendnote83anc">83</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Bhaumik. (2001), 45. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote84">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote84sym" href="#sdendnote84anc">84</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Ibid. 53, 79-80. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote85">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote85sym" href="#sdendnote85anc">85</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Tambe,
+	A. (2009). </font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Codes
+	of Misconduct: Regulating Prostitution in Late Colonial Bombay.
+	</I></font></font>
+                                </font><font color="#000000"><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Minneapolis,
+	US: University of Minnesota Press, 69. </font></font>
+                                </font>
+                            </p>
+                        </div>
+                        <div id="sdendnote86">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote86sym" href="#sdendnote86anc">86</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Newman,
+	R. K. (1981), </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">26.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote87">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote87sym" href="#sdendnote87anc">87</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Census of India, 1931, I, 199.</font></font>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footnote-ref footnote-ref-7">
+                        <div id="sdendnote88">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; widows: 0; orphans: 0; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote88sym" href="#sdendnote88anc">88</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	Mukherjee, Debashree. </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">(2016).
+	Tracking Utopias: Technology, labour and secularism in Bombay cinema
+	(1930s-1940s). In Rajagopal, A., and Rao, A. (2016</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>).
+	Media and utopia: History, imagination and technology. </I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">(pp.
+	81-102). London: Routledge, Taylor &amp; Francis Group, 82. </font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote89">
+                            <p style="margin-left: 0.13in; text-indent: -0.13in; margin-bottom: 0in; page-break-before: always">
+                                <a class="sdendnotesym" name="sdendnote89sym" href="#sdendnote89anc">89</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Gulazāra,
+	G.N., Nihalani, G., and Chatterjee, S. (2003). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Encyclopaedia
+	of Hindi Cinema.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	New Delhi: Encyclopaedia Britannica (India), 58-9.</font></font><font face="Times New Roman, serif">
+	</font>
+                            </p>
+                        </div>
+                        <div id="sdendnote90">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote90sym" href="#sdendnote90anc">90</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	</font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">Mishra,
+	V. (2002). </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Bollywood
+	Cinema: Temples of desire.</I></font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	New York: Routledge, 2.</font></font>
+                            </p>
+                        </div>
+                        <div id="sdendnote91">
+                            <p style="margin-bottom: 0in; page-break-before: always"><a class="sdendnotesym" name="sdendnote91sym" href="#sdendnote91anc">91</a><sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"></font></font></sup><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt">
+	McCarthy, N. (2014, September 3). India’s Film Industry By The
+	Numbers. </font></font><font face="Times New Roman, serif"><font size=2 style="font-size: 10pt"><I>Forbes
+	Magazine. </I></font></font>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- http://document.online-convert.com/convert-to-html -->
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+        <div class="row red bottom-line">
+            <div class="col-sm-12">
+                <h5>
+                  <center>Bombay/Mumbai and its Urban Imaginaries</center>
+               </h5>
+            </div>
+        </div>
     </div>
+    <!-- DO NOT CHANGE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!-- DO NOT CHANGE -->
+    <script>
+        $(document).ready(function() {
 
-    <div id="map"></div>
-    <script src="libs/jquery-1.11.1.min.js"></script>
-    <script src="libs/leaflet-0.7.7/leaflet.js"></script>
-    <script src="libs/leaflet-sidebar-0.1.9/L.Control.Sidebar.js"></script>
-    <script src="libs/leaflet.awesome-markers-2.0.2/leaflet.awesome-markers.min.js"></script>
-    <script src="libs/main.js"></script>
+            // bootstrap affix menu
+            $('#nav').affix({
+                offset: {
+                    top: $('#nav').offset().top
+                }
+            });
+
+            // footnote logic
+            $('.footnote').each(function() {
+                /*
+                var f = $(this).attr('class').split(" ")[1];
+                var num = f.split("-")[1];
+                var top = $('.' + f).position().top - 10;
+
+                var num_c = num - 1;
+                var offset = num_c * 88;
+                var top_n = top - offset;
+
+                // align footnote to position
+                $('.footnote-ref-' + num).css({
+                  top: top_n
+                });
+                var final_p = $('.footnote-ref-' + num).position().top;
+                */
+
+            });
+
+            // if window small then
+            if ($("ul.c4sr-nav").css("display") == "none") {
+                $('.footnote-ref').each(function() {
+                    $(this).css({
+                        'top': 0,
+                        'margin-bottom': '10px'
+                    });
+                });
+            };
+
+            $(window).resize(function() {
+                notePosition();
+            });
+
+            function notePosition() {
+
+                var left_1 = $('[name=sdendnote1anc]').position().top;
+                $(".footnote-ref-1").css('top', left_1 + 'px')
+
+                var left_2 = $('[name=sdendnote10anc]').position().top;
+                $(".footnote-ref-2").css('top', left_2 - $(".footnote-ref-1").height() + 'px')
+
+                var left_3 = $('[name=sdendnote21anc]').position().top;
+                $(".footnote-ref-3").css('top', left_3 - $(".footnote-ref-1").height() - $(".footnote-ref-2").height() + 'px')
+
+                var left_4 = $('[name=sdendnote43anc]').position().top;
+                $(".footnote-ref-4").css('top', left_4 - $(".footnote-ref-1").height() - $(".footnote-ref-2").height() - $(".footnote-ref-3").height() + 'px')
+
+                var left_5 = $('[name=sdendnote54anc]').position().top;
+                $(".footnote-ref-5").css('top', left_5 - $(".footnote-ref-1").height() - $(".footnote-ref-2").height() - $(".footnote-ref-3").height() - $(".footnote-ref-4").height() + 'px')
+
+                var left_6 = $('[name=sdendnote68anc]').position().top;
+                $(".footnote-ref-6").css('top', left_6 - $(".footnote-ref-1").height() - $(".footnote-ref-2").height() - $(".footnote-ref-3").height() - $(".footnote-ref-4").height() - $(".footnote-ref-5").height() + 'px')
+
+                var left_7 = $('[name=sdendnote88anc]').position().top;
+                $(".footnote-ref-7").css('top', left_7 - $(".footnote-ref-1").height() - $(".footnote-ref-2").height() - $(".footnote-ref-3").height() - $(".footnote-ref-4").height() - $(".footnote-ref-5").height() - $(".footnote-ref-6").height() + 'px')
+
+                if ($(window).width() < 960) {
+                    $(".footnote-ref").css('top', '0px')
+                } else {
+                    $(".footnote-ref").css('position', 'relative')
+                };
+
+            };
+
+            notePosition();
+
+        });
+    </script>
 </body>
 
 </html>
