@@ -5,7 +5,7 @@
       maxZoom: 18
   });
 
-  var layerMapboxLight = new L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGFzdCIsImEiOiJjaXdwNGFtdzUwMDBsMm9wNzd3NGFtOThtIn0.lFgLx089BmfigTPq7sUVhA', {
+  var layerMapboxLight = new L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGFzdCIsImEiOiJjamozeHpsMjUxZW50M3ZudmNqOHJvam9tIn0.mxDriiso7mD7ru8WCkltSg', {
       maxZoom: 18,
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
           '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
